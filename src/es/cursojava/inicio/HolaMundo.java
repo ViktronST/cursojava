@@ -6,7 +6,7 @@ public class HolaMundo {
   public static void main (String [] args) {
 	 System.out.println("Hola Mundo");
 	 final int numero = 4;
-	 String nombre = "Vik";
+	 String nombre = "Viktor";
 	 int edad = 24;
 	 System.out.println(Math.PI);
 	 Scanner scan = new Scanner(System.in);
