@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class HolaMundo {
   public static void main (String [] args) {
-	 System.out.println("Hola Mundo");
+	 System.out.println("Hola Mundo MUU");
 	 System.out.println("Que tal mi gente?");
 	 final int numero = 4;
 	 String nombre = "Viktor";
