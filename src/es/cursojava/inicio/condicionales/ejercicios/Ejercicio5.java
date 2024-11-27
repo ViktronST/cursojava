@@ -16,8 +16,6 @@ public class Ejercicio5 {
 		System.out.print("Experiencia del empleado: ");
 		int exp = scan.nextInt();
 		
-		String puesto = scan.nextLine();
-		
 		String empleado = "";
 		
 		if(dep.equals("Ventas")) {
