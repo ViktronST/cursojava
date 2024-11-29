@@ -12,10 +12,15 @@ public class Ejercicio4 {
 		System.out.print("Dame un número: ");
 		int num = scan.nextInt();
 		
-		do {
-			
+		if(num<=0) {
+			System.out.println("ingrsa un número mayor a 0");
+		}else {
+			for(int i=1 ; i<=num ; i++) {
+				System.out.println("Tabla del " + i + ": ");
+				for(int j=1 ; j<=10 ; j++) {
+					System.out.println(i + " x " + j + " = " + (i*j));
+				}
+			}
 		}
-		
 	}
-
 }
