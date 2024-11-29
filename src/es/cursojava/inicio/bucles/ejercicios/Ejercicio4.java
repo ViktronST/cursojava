@@ -9,8 +9,13 @@ public class Ejercicio4 {
 		//Mostrar todas las tablas de multiplicar hasta el número que solicitéis al usuario
 		
 		Scanner scan = new Scanner(System.in);
+		System.out.print("Dame un número: ");
+		int num = scan.nextInt();
 		
-
+		do {
+			
+		}
+		
 	}
 
 }
