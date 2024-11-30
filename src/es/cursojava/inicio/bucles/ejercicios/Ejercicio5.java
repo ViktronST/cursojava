@@ -11,39 +11,54 @@ public class Ejercicio5 {
 //		Indicar la nota media de todos los alumnos del aula.
 		
 		Scanner scan = new Scanner(System.in);
-		int numAlumnos = 15;
+		System.out.println("Introduce el número de alumnos del aula: ");
+		int numAlumnos = scan.nextInt();
 		
 		if(numAlumnos<=0) {
 			System.out.println("El número de alumnos debe ser mayor que 0.");
-		}else {
-			int sumaNotas = 0;
-
-			for(int i=1 ; numAlumnos<=0; i++) {
-				System.out.println("Ingrsa la nota del alumno " + i + ": ");
-				
-				int nota = scan.nextInt();
-				
-				if(nota<0 || nota>10) {
-					System.out.println("Nota inválida");
-					i--;
-				}else {
-					sumaNotas += nota;
-				}
-
-			}
-			int notaMedia = sumaNotas/numAlumnos;
-			System.out.println("La nota media de los " + numAlumnos + " alumnos es: " + notaMedia);		
-
+			return;
 		}
 		
-//		do {
-//			System.out.print("Escribe la nota del alumno: ");
-//			int notaAlumno = scan.nextInt();
-//			numAlumnos++;
-//			nota++;
-//		}while(numAlumnos<15);
+		int sumaNotas = 0;
+		
+		for(int i=1 ; i<=numAlumnos ; i++) {
+			System.out.println("Introduce la nota del alumno " + i + ": ");
+			int nota = scan.nextInt();
+			
+			if(nota<0 || nota>10) {
+				System.out.println("Nota inválida");
+				i--;
+				continue;
+			}
+			sumaNotas += nota;
+		}
+		
+//		int i = 1;
 //		
-//		System.out.println("La nota media es de: " + (nota/numAlumnos));
+//		do {
+//			System.out.println("Introduce la nota del alumno " + i + ": ");
+//			int nota =scan.nextInt();
+//			
+//			if(nota<0 || nota>10) {
+//				System.out.println("Nota inválida");
+//			}else {
+//				sumaNotas += nota;
+//				i++;
+//			}
+//		}while (i<=numAlumnos);
+//		
+		int notaMedia = sumaNotas/numAlumnos;
+		System.out.println("La nota media de los " + numAlumnos + " alumnos es: " + notaMedia);
+		
+		if(notaMedia>=9) {
+			System.out.println("¡Excelente rendimiento!");
+		}else if(notaMedia>=7) {
+			System.out.println("Buen rendimiento.");
+		}else if(notaMedia>=5) {
+			System.out.println("Rendimiento promedio.");
+		}else {
+			System.out.println("Rendimiento insuficiente.");
+		}
 
 	}
 
