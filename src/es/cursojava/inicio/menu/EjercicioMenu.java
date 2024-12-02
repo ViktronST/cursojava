@@ -67,11 +67,16 @@ public class EjercicioMenu {
 			System.out.print("Introduce el email: ");
 			String email = scan.nextLine();
 			
-			if(email.contains(" ") || email.isEmpty() || email.contains()) {
-				System.out.println("Introduce un correo válido.");
-			}else {
-				System.out.println("Correo válido.");
+			if(email.contains("@")) {
+				
 			}
+			
+			if(email.indexOf("@")==email.lastIndexOf("@")) {
+				
+			}
+			
+			System.out.println("Correo válido.");
+			
 			
 		}else if(opcion.equals("tres") || opcion.equals("3")) {
 			System.out.println("- Has seleccionado añadir alumno.");
@@ -79,6 +84,7 @@ public class EjercicioMenu {
 			
 		}else if(opcion.equals("cuatro") || opcion.equals("4")) {
 			System.out.println("= = = Adiós! = = =");
+			
 		}else {
 			System.out.println(" Oops!, error... ");
 		}

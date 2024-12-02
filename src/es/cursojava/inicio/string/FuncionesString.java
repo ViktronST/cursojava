@@ -20,7 +20,7 @@ public class FuncionesString {
 		//Si le damos un dato que no esté presente, este nos contestará con un -1.
 		
 		String msg2 = "      ";
-		String mensaj = msg2.trim(); //Elimina los espacios en blanco que tengamos del carracter a la izq y derech.
+		String mensaj = msg2.trim(); //Elimina los espacios en blanco que tengamos del caracter a la izq y derech.
 		                    //Sin ningun caracter elimina todos los espacios en blanco.
 		                    //Si hay una frase no elimina los espacios entre medias.
 		

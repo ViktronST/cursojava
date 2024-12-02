@@ -15,18 +15,31 @@ public class Ejercicio8 {
 		
 		System.out.println("¿Cuántos tenistas se apuntan al torneo?");
 		int numTenistas = scan.nextInt();
-		int top10 =0;
+		int contadorTop10 = 0;
 		
 		for(int i=1 ; i<numTenistas ; i++) {
 			System.out.println("Ingresa el puesto ATP del tenista " + i + ": ");
 			int puestoATP = scan.nextInt();
 			
 			if(puestoATP>=1 && puestoATP<=10) {
-				top10++;
+				contadorTop10++;
 			}
 		}
+		System.out.println("Número de tenistas en el top 10 :" + contadorTop10);
 		
-		System.out.println("Número de tenistas en el top 10 :" + top10);
+		
+//		for(int i=1 ; i<numTenistas ; i++) {
+//			int puestoATP = 0;
+//			do {
+//				System.out.println("Ingresa el puesto ATP del tenista " + i + ": ");
+//				puestoATP = scan.nextInt();
+//			}while (puestoATP<0);
+//			
+//			if(puestoATP<=10) {
+//				contadorTop10++;
+//			}
+//		}
+//		System.out.println("Número de tenistas en el top 10 :" + contadorTop10);
 
 	}
 
