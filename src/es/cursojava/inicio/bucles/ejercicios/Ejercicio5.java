@@ -19,11 +19,11 @@ public class Ejercicio5 {
 			return;
 		}
 		
-		int sumaNotas = 0;
+		double sumaNotas = 0;
 		
 		for(int i=1 ; i<=numAlumnos ; i++) {
 			System.out.println("Introduce la nota del alumno " + i + ": ");
-			int nota = scan.nextInt();
+			double nota = scan.nextDouble();
 			
 			if(nota<0 || nota>10) {
 				System.out.println("Nota inválida");
@@ -37,7 +37,7 @@ public class Ejercicio5 {
 //		
 //		do {
 //			System.out.println("Introduce la nota del alumno " + i + ": ");
-//			int nota =scan.nextInt();
+//			int nota = scan.nextInt();
 //			
 //			if(nota<0 || nota>10) {
 //				System.out.println("Nota inválida");
@@ -47,7 +47,7 @@ public class Ejercicio5 {
 //			}
 //		}while (i<=numAlumnos);
 //		
-		int notaMedia = sumaNotas/numAlumnos;
+		Double notaMedia = sumaNotas/numAlumnos;
 		System.out.println("La nota media de los " + numAlumnos + " alumnos es: " + notaMedia);
 		
 		if(notaMedia>=9) {
@@ -59,7 +59,7 @@ public class Ejercicio5 {
 		}else {
 			System.out.println("Rendimiento insuficiente.");
 		}
-
+		
 	}
 
 }

@@ -11,7 +11,7 @@ public class Ejercicio7 {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.print("Introduce un número de la serie de Fibonacci: ");
+		System.out.println("¿Cuántos números de la serie de Fibonacci quieres?");
 		int num = scan.nextInt();
 		
 		int a = 0;

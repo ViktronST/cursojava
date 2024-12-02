@@ -15,28 +15,28 @@ public class Ejercicio3 {
 		System.out.println("4. Salir");
 		System.out.print("\nElige una opción: ");
 		scan = new Scanner(System.in);
-//		String opcion = scan.nextLine();
+		String opcion = scan.nextLine();
 		
-//		if(opcion.equals("uno") || opcion.equals("1")) {
-//			System.out.println("Ha seleccionado Pintar Cuadrado");
-//		}else if(opcion.equals("dos") || opcion.equals("2")) {
-//			System.out.println("Ha seleccionado Validar email");
-//		}else if(opcion.equals("tres") || opcion.equals("3")) {
-//			System.out.println("Ha seleccionado Añadir alumno");
-//		}else if(opcion.equals("cuatro") || opcion.equals("4")) {
-//			System.out.println("Adiós!");
-//		}else {
-//			System.out.println("Oops!, error...");
-//		}
-		
-		int opcion = scan.nextInt();
-		switch(opcion) {
-		case 1: System.out.println("Has elegido la opcion " + opcion + " Pintar Cuadrado.");break;
-		case 2: System.out.println("Has elegido la opcion " + opcion + " Pintar Cuadrado.");break;
-		case 3: System.out.println("Has elegido la opcion " + opcion + " Pintar Cuadrado.");break;
-		case 4: System.out.println("Adiós!");break;
-		default: System.out.println("Oops!, error...");
+		if(opcion.equals("uno") || opcion.equals("1")) {
+			System.out.println("Ha seleccionado Pintar Cuadrado");
+		}else if(opcion.equals("dos") || opcion.equals("2")) {
+			System.out.println("Ha seleccionado Validar email");
+		}else if(opcion.equals("tres") || opcion.equals("3")) {
+			System.out.println("Ha seleccionado Añadir alumno");
+		}else if(opcion.equals("cuatro") || opcion.equals("4")) {
+			System.out.println("Adiós!");
+		}else {
+			System.out.println("Oops!, error...");
 		}
+		
+//		int opcion = scan.nextInt();
+//		switch(opcion) {
+//		case 1: System.out.println("Has elegido la opcion " + opcion + " Pintar Cuadrado.");break;
+//		case 2: System.out.println("Has elegido la opcion " + opcion + " Pintar Cuadrado.");break;
+//		case 3: System.out.println("Has elegido la opcion " + opcion + " Pintar Cuadrado.");break;
+//		case 4: System.out.println("Adiós!");break;
+//		default: System.out.println("Oops!, error...");
+//		}
 	}
 
 }

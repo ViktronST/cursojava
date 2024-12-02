@@ -16,18 +16,29 @@ public class Ejercicio6 {
 		System.out.print("Introduce un número: ");
 		int num = scan.nextInt();
 		
+		boolean esPar = num%2==0;
 		do {
-			if(num%2==0) {
+			if(esPar) {
 				num = num/2;
-				System.out.println(num);
-			}else if(num%2!=0) {
-				num = (num*3) + 1;
-				System.out.println(num);
 			}else {
-				System.out.println("FIN");
+				num = num*3+1;
 			}
-		}while(num!=1);
-
+			System.out.println(num);
+		}while (num!=1);
+		
+//		do {
+//			if(num%2==0) {
+//				num = num/2;
+//				System.out.println(num);
+//			}else if(num%2!=0) {
+//				num = (num*3) + 1;
+//				System.out.println(num);
+//			}else {
+//				System.out.println("FIN"); //Esta parte no es necerias ya que si un num no es par, si o si, será impar.
+//			}
+//		}while(num!=1);
+		
+		scan.close();
 
 	}
 
