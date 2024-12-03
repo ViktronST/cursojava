@@ -75,12 +75,47 @@ public class EjercicioMenu {
 					System.out.println("\nIntroduce el email:");
 					scan = new Scanner(System.in);
 					String email = scan.nextLine();
-					email.trim();
+					email = email.trim();
+					email = email.replace(" ", "");
 					
-					if(email.contains("@") && email.indexOf("@")==email.lastIndexOf("@")) {
-						System.out.println("- Correo Válido -");
+					String error = "";
+					
+					if(email.contains(" ") || email.contains("\t")) {
+						error += "contiene uno o más espacios en blanco.";
+					}
+					
+					if(!email.contains("@")) {
+						error += "no tiene un @.";
+					}
+					
+//					// Una forma de validar el @.
+//					int contadorArrobas = 0;
+//					for(int i=0 ; i<email.length() ; i++) {
+//						char caracter = email.charAt(i);
+//						if(caracter=='@') {
+//							contadorArrobas++;
+//						}
+//					}
+//					
+//					if(contadorArrobas>1) {
+//						error += "el email tiene más de un @.";
+//					}
+					
+					// Otra forma de validar el @.
+					if(email.indexOf("@")!=email.lastIndexOf("@")) {
+						error += "contiene uno o más @.";
+					}
+					
+					if(email.indexOf("@")<email.lastIndexOf(".")) {
+						error += "tiene un que haber un punto después del @.";
+					}
+					
+					System.out.println(error);
+					
+					if(error.isBlank()) {
+						System.out.println("El email" + email + "es válido.");
 					}else {
-						System.out.println("- Correo Inválido -");
+						System.out.println("El email" + email + "es incorrecto por: " + error);
 					}
 					
 					break;
