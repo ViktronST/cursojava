@@ -34,60 +34,63 @@ public class EjercicioMenu {
 		
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("Bienvenido al Menú");
-		System.out.println("1. Pintar Cuadrado");
-		System.out.println("2. Validar email");
-		System.out.println("3. Añadir alumno");
-		System.out.println("4. Salir");
-		System.out.print("\nElige una opción: ");
-		scan = new Scanner(System.in);
-		String opcion = scan.nextLine();
+		int opcion = 0;
+		final int OPCION_SALIR = 4;
 		
-		if(opcion.equals("uno") || opcion.equals("1")) {
-			System.out.println("- Has seleccionado Pintar Cuadrado.");
-			System.out.println("¿De qué tamaño quieres el cuadrado?");
-			int tamanio = scan.nextInt();
+		do {
+			System.out.println("Bienvenido al Menú");
+			System.out.println("1. Pintar Cuadrado");
+			System.out.println("2. Validar email");
+			System.out.println("3. Añadir alumno");
+			System.out.println("4. Salir");
+			System.out.print("\nElige una opción: ");
+			scan = new Scanner(System.in);
 			
-			for(int i=0 ; i<tamanio ; i++) {
-				
-				for(int j=0; j<tamanio ; j++) {	
+			opcion = scan.nextInt();
+			
+			switch(opcion) {
+			
+				case 1: 
+					System.out.println("- Has elegido la opcion " + opcion + ": Pintar cuadrado.");
+					System.out.println("\n¿De que tamaño será el cuadrado?");
+					scan = new Scanner(System.in);
+					int tamanio = scan.nextInt();
 					
-					if(i==0 || i==tamanio-1 || j==0 || j==tamanio-1) {
-						System.out.print(" * ");
-					}else {
-						System.out.print("   ");
+					for(int fila=0 ; fila<tamanio ; fila++) {
+						
+						for(int columna=0 ; columna<tamanio ; columna++) {
+							
+							if(fila==0 || fila==tamanio-1 || columna==0 || columna==tamanio-1) {
+								System.out.print(" * ");
+							}else {
+								System.out.print("   ");
+							}
+						}
+						System.out.println();
 					}
-				}
-				System.out.println(" ");
-
+					break;
+					
+				case 2: 
+					System.out.println("Has elegido la opcion " + opcion + ": Validar email.");
+					System.out.println("\nIntroduce el email:");
+					scan = new Scanner(System.in);
+					String email = scan.nextLine();
+					email.trim();
+					
+					if(email.contains("@") && email.indexOf("@")==email.lastIndexOf("@")) {
+						System.out.println("- Correo Válido -");
+					}else {
+						System.out.println("- Correo Inválido -");
+					}
+					
+					break;
+					
+				case 3: System.out.println("Has elegido la opcion " + opcion + ": Añadir alumno.");break;
+				case 4: System.out.println("= = = Adiós! = = =");break;
+				default: System.out.println("- Opción Incorrecta -");
 			}
 			
-		}else if(opcion.equals("dos") || opcion.equals("2")) {
-			System.out.println("- Has seleccionado validar email.");
-			System.out.print("Introduce el email: ");
-			String email = scan.nextLine();
-			
-			if(email.contains("@")) {
-				
-			}
-			
-			if(email.indexOf("@")==email.lastIndexOf("@")) {
-				
-			}
-			
-			System.out.println("Correo válido.");
-			
-			
-		}else if(opcion.equals("tres") || opcion.equals("3")) {
-			System.out.println("- Has seleccionado añadir alumno.");
-			
-			
-		}else if(opcion.equals("cuatro") || opcion.equals("4")) {
-			System.out.println("= = = Adiós! = = =");
-			
-		}else {
-			System.out.println(" Oops!, error... ");
-		}
+		}while(opcion!=OPCION_SALIR);
 
 	}
 
