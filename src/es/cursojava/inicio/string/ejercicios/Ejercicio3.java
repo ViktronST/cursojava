@@ -20,5 +20,16 @@ public class Ejercicio3 {
 			}
 		}
 		System.out.println(texto + " contiene " + contador + " vocales.");
+		
+//		//Otra manera de hacerlo
+//		String vocales = "aeiou";
+//		for(int i=0 ; i<texto.length() ; i++) {
+//			char caracter = texto.charAt(i);
+//			if(texto.indexOf(caracter)!=-1) {
+//				contador++;
+//			}
+//		}
+//		System.out.println(texto + " contiene " + contador + " vocales.");
+		
 	}
 }
