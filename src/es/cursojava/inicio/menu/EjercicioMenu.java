@@ -75,17 +75,38 @@ public class EjercicioMenu {
 					System.out.println("\nIntroduce el email:");
 					scan = new Scanner(System.in);
 					String email = scan.nextLine();
-					email = email.trim();
+					email = email.toLowerCase().trim(); // Se pueden ir concatenando...
 					email = email.replace(" ", "");
 					
 					String error = "";
 					
 					if(email.contains(" ") || email.contains("\t")) {
-						error += "contiene uno o más espacios en blanco.";
+						error += "Contiene uno o más espacios en blanco.\n";
 					}
 					
 					if(!email.contains("@")) {
-						error += "no tiene un @.";
+						error += "No tiene un @.\n";
+						
+					}else {
+						
+						if(email.indexOf("@")>email.lastIndexOf(".")) {
+							error += "Tiene un que haber un punto después del @.\n";
+							
+						}else {
+							
+							String dominoCorreo = email.substring(email.indexOf("@")+1);
+							
+							if(dominoCorreo.indexOf(".")<2) {
+								error += "Tiene que haber una separación de 2 o más carácteres entre el @ y el punto.\n";
+							}
+							
+							 String subDominio = dominoCorreo.substring(dominoCorreo.lastIndexOf(".")+1);
+							 
+							 if(subDominio.length()<2 || subDominio.length()>6) {
+								error += "Después del último punto, sólo puede haber entre 2 y 6 carácteres.\n";
+							}
+						}
+						
 					}
 					
 //					// Una forma de validar el @.
@@ -98,24 +119,24 @@ public class EjercicioMenu {
 //					}
 //					
 //					if(contadorArrobas>1) {
-//						error += "el email tiene más de un @.";
+//						error += "El email tiene más de un @.\n";
 //					}
 					
 					// Otra forma de validar el @.
 					if(email.indexOf("@")!=email.lastIndexOf("@")) {
-						error += "contiene uno o más @.";
+						error += "Contiene uno o más @.\n";
 					}
 					
-					if(email.indexOf("@")<email.lastIndexOf(".")) {
-						error += "tiene un que haber un punto después del @.";
+					if(email.indexOf("@")==-1) {
+						error += "No contiene ningún @.\n";
 					}
 					
 					System.out.println(error);
 					
 					if(error.isBlank()) {
-						System.out.println("El email" + email + "es válido.");
+						System.out.println("El email " + email + " es válido.\n");
 					}else {
-						System.out.println("El email" + email + "es incorrecto por: " + error);
+						System.out.println("El email " + email + " es incorrecto por:\n" + error);
 					}
 					
 					break;
