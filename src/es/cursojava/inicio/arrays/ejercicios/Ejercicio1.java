@@ -21,6 +21,6 @@ public class Ejercicio1 {
 			System.out.print("Introduce el nombre del alumno " + i + ": ");
 			alumno[i]=scan.nextLine();
 		}
-		System.out.println(alumno);
+		System.out.println("Lista de alumnos: ");
 	}
 }
