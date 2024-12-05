@@ -17,13 +17,9 @@ public class Ejercicio1 {
 		int numAlumnos = scan.nextInt();
 		String[] alumno = new String[numAlumnos];
 		
-		for(int i=1 ; i<=alumno.length ; i++) {
-			System.out.print("Introduce el nombre del alumno " + i + ": "); 
-			alumno[1]=scan.nextLine();
-			alumno[2]=scan.nextLine();
-			alumno[3]=scan.nextLine();
-			alumno[4]=scan.nextLine();
-			numAlumnos++;
+		for(int i=1 ; i<=numAlumnos ; i++) {
+			System.out.print("Introduce el nombre del alumno " + i + ": ");
+			alumno[i]=scan.nextLine();
 		}
 		System.out.println(alumno);
 	}
