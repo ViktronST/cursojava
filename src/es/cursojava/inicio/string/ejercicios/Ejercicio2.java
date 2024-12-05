@@ -38,5 +38,7 @@ public class Ejercicio2 {
 //		if(esPalindromo) {
 //			System.out.print(texto + " es palíndromo.");
 //		}
+		
+		scan.close();
 	}
 }

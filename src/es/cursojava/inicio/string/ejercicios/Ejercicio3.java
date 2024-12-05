@@ -31,5 +31,6 @@ public class Ejercicio3 {
 //		}
 //		System.out.println(texto + " contiene " + contador + " vocales.");
 		
+		scan.close();
 	}
 }
