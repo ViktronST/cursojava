@@ -49,10 +49,9 @@ public class Pruebas {
 //			        }
 					
 					break;
-					
 				case 2:
 					System.out.println("Introduce el email a validar: ");
-					String email = scan.nextLine();
+					String email = scan.nextLine().trim().toLowerCase();
 					String errores = "";
 					
 					//Debe contener solo un @.
@@ -109,7 +108,6 @@ public class Pruebas {
 					}
 										
 					break;
-					
 				case 3:
 					System.out.println("Introduce un alumno.");
 					break;
