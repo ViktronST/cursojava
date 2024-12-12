@@ -32,7 +32,21 @@ public class FuncionesString {
 		
 		System.out.println(mensaje.substring(4)); //Devuelve la posición indica hasta el final del mensaje.
 		System.out.println(mensaje.substring(4,8)); //Devuelve solo el mensaje entre las dos posiciones.
-
+		
+		//***** NUEVO ***** (12/12/2024)
+		String textoOriginal = "reco;nocer";
+		String[] datos = textoOriginal.split(";"); //Trocea desde el punto o caracter que le indiquemos.
+		               //textoOriginal.split("")   //De esta forma separa los caracteres uno a uno.                       
+		
+		for (String string : datos) {
+			System.out.println(string);
+		}
+		
+		for(int i=0 ; i<datos.length/2 ; i++) {
+			if(!datos[i].equals(datos[datos.length-1-i])) {
+				System.out.println("No es palíndromo");
+				break;
+			}
+		}
 	}
-
 }
