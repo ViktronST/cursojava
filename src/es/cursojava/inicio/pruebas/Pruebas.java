@@ -11,7 +11,7 @@ public class Pruebas {
 		int option;
 		
 		do {
-			System.out.println("**** MENÚ ****");
+			System.out.println("==== MENÚ ====");
 			System.out.println("1. Pintar Triángulo");
 			System.out.println("2. Validar Email");
 			System.out.println("3. Añadir Alumno");
@@ -22,21 +22,18 @@ public class Pruebas {
 			switch(option) {
 				case 1:
 					//Pintar un triángulo
-					System.out.println("Dame la altura del triángulo: ");
+					System.out.println("Dame la altura del árbol navideño: ");
 					int altura = scan.nextInt();
 					
 					//Generar árbol de navidad
 					for(int i=1 ; i<=altura ; i++) {
-						//Imprimir espacios en blanco
-						for(int j=1 ; j<=altura-i ; j++) {
+						for(int j=1 ; j<=altura-i ; j++) {		//Imprimir espacios en blanco
 							System.out.print(" ");
 						}
-						//Imprimir asteriscos
-						for(int j=1; j<=(2*i-1); j++) {
+						for(int j=1; j<=(2*i-1); j++) {			//Imprimir asteriscos
 							System.out.print("*");
 						}
-						//Salto de línea
-						System.out.println();
+						System.out.println();					//Salto de línea
 					}
 					
 					

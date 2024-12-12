@@ -9,19 +9,19 @@ public class Arrays {
 		int[] numeros = new int[6];
 		
 		System.out.println(numeros[1]);  //Devuelve el numero en la posicion 1 que es 0.
-		numeros[1] = 8;                  //Sustituye el valor del numero en la posición por el valor 8.
+		numeros[1] = 8;                  //Sustituye el valor del numero en la posición 1 por el valor 8.
 		System.out.println(numeros[1]);  //Devuelve el numero en la posicion 1 que es 8.
-		numeros[1] = 5; 				 //Sustituye el valor del numero en la posición por el valor 5.
-		numeros[1] = 7;  				 //Sustituye el valor del numero en la posición por el valor 7.
+		numeros[1] = 5; 				 //Sustituye el valor del numero en la posición 1 por el valor 5.
+		numeros[1] = 7;  				 //Sustituye el valor del numero en la posición 1 por el valor 7.
 		System.out.println(numeros[6]);  //Devuelve error ya que nos salimos del tamaño del Array.
 		
 		String[] colores = new String[2];
-		System.out.println(colores[0]);  //Dará null, 
-		
+		System.out.println(colores[0]);  //Dará null, ya que las posición no estará apuntando a ningún String.
+		                                 //Dará 0 si hablamos de un Int.
 		
 		//Crea un Array de colores
 		//Declaro el array y le indeico que tiene tamaño 4.
-		String[] colores = new String[4];
+//		String[] colores = new String[4];
 		//Asigno valores a cada posición.
 		colores[0]="Rojo";
 		colores[1]="Verde";
