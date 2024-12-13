@@ -3,7 +3,6 @@ package es.cursojava.inicio.string.ejercicios;
 import java.util.Scanner;
 
 public class Ejercicio3 {
-
 	public static void main(String[] args) {
 		
 		//Crea un programa que cuente cuántas vocales (a, e, i, o, u) tiene un String. Ignora las mayúsculas y minúsculas.

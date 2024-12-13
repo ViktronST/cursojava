@@ -18,7 +18,7 @@ public class Pruebas {
 			System.out.println("4. Salir");
 			option = scan.nextInt();
 			scan.nextLine();
-			
+		    
 			switch(option) {
 				case 1:
 					//Pintar un triángulo

@@ -3,7 +3,6 @@ package es.cursojava.inicio.string.ejercicios;
 import java.util.Scanner;
 
 public class Ejercicio2 {
-
 	public static void main(String[] args) {
 		
 		//Escribe un programa que determine si un String ingresado por el usuario es un palíndromo 
