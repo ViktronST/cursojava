@@ -30,17 +30,14 @@ public class Ejercicio6 {
 			}
 			System.out.println("");
 		}
+		System.out.println("");
 		
-		for (int[] fila : numeros) {
-			for (int numero : fila) {
-				System.out.print(numero);
+		System.out.println("\n- - - Matríz - - -");
+		for (int[] matriz : numeros) {
+			for (int numero : matriz) {
+				System.out.print(numero + "\t");
 			}
-		}
-		
-		for (int[] columna : numeros) {
-			for (int numero : columna) {
-				System.out.print(numero);
-			}
+			System.out.println("");
 		}
 
 	}
