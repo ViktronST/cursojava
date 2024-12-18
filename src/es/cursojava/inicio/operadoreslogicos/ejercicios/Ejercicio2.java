@@ -5,6 +5,11 @@ import java.util.Scanner;
 public class Ejercicio2 {
 	public static void main(String[] args) {
 		
+//		Escribe un programa que:
+//		    1. Solicite al usuario dos números enteros.
+//		    2. Compare si el primer número es mayor, menor o igual al segundo.
+//		    3. Muestre un mensaje indicando el resultado de la comparación.
+		
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("Introduce un número: ");

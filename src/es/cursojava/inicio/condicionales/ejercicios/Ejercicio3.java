@@ -6,6 +6,17 @@ public class Ejercicio3 {
 
 	public static void main(String[] args) {
 		
+//		Pintar menu
+//		1. Pintar Cuadrado
+//		2. Validar email
+//		3. Añadir Alumno
+//		4. Salir
+//
+//		Elige una opción
+//
+//		Se pide la opción por teclado, dependiendo de la opción introducida le indicamos la que ha seleccionado, 
+//		si selecciona la 4 le decimos "Adios!" y si no es ninguna de las que existe que se ha equivocado
+		
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("Bienvenido al Menú");

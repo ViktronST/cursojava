@@ -5,6 +5,11 @@ import java.util.Scanner;
 public class Ejercicio4 {
 	public static void main(String[] args) {
 		
+//		Haz un programa que:
+//		    1. Pida al usuario un número entero.
+//		    2. Determine si el número es par o impar utilizando el operador módulo (%).
+//		    3. Muestre el resultado.
+		
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("Introduce un número: ");

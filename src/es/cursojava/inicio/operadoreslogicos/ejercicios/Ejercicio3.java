@@ -5,6 +5,11 @@ import java.util.Scanner;
 public class Ejercicio3 {
 	public static void main(String[] args) {
 		
+//		Crea un programa que:
+//		    1. Pida al usuario dos números.
+//		    2. Solicite la operación a realizar (+, -, *, /).
+//		    3. Realice la operación correspondiente y muestre el resultado.
+		
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("Escribe un número: ");

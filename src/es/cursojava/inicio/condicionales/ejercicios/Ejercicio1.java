@@ -3,6 +3,16 @@ package es.cursojava.inicio.condicionales.ejercicios;
 public class Ejercicio1 {
 	public static void main(String[] args) {
 		
+//		+ Crear paquete ejercicios dentro de condicionales
+//		+ Declarar la variables asignatura de tipo String, nombreAlumno de tipo String y nota de tipo int 
+//		+ Inicializar las variables con valores inventados
+//		+ El resultado a mostrar sería: El alumno Juan en la asignatura Matemáticas tiene un Notable
+//
+//		0 <5 suspenso
+//		5 <7 aprobado
+//		7 <9 notable
+//		9-10 sobresaliente
+		
 		String alumno = "Mario";
 		String asignatura = "Lengua y Literatura";
 		

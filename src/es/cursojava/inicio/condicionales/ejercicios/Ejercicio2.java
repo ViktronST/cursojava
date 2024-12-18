@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class Ejercicio2 {
 	public static void main(String[] args) {
 		
+//		Pedir dos numeros y pedir la operación que se quiere realizar ("suma o +", resta o - ,*,/)  nextLine
+//
+//		Mostrar el resultado de la operación con los dos números
+		
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("Dame un número: ");
