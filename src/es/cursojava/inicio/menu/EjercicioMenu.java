@@ -141,9 +141,16 @@ public class EjercicioMenu {
 					
 					break;
 					
-				case 3: System.out.println("Has elegido la opcion " + opcion + ": Añadir alumno.");break;
-				case 4: System.out.println("= = = Adiós! = = =");break;
-				default: System.out.println("- Opción Incorrecta -");
+				case 3: 
+					System.out.println("Has elegido la opcion " + opcion + ": Añadir alumno.");
+					break;
+					
+				case 4: 
+					System.out.println("= = = Adiós! = = =");
+					break;
+					
+				default: 
+					System.out.println("- Opción Incorrecta -");
 			}
 			
 		}while(opcion!=OPCION_SALIR);
