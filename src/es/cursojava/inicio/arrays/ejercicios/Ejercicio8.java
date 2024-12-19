@@ -72,7 +72,9 @@ public class Ejercicio8 {
                                 break;
                             }
                         }
-                        if (encontrado) break;
+                        if (encontrado) {
+                        	break;
+                        }
                     }
 
                     if (!encontrado) {
@@ -94,7 +96,9 @@ public class Ejercicio8 {
                                 break;
                             }
                         }
-                        if (borrado) break;
+                        if (borrado) {
+                        	break;
+                        }
                     }
 
                     if (!borrado) {
