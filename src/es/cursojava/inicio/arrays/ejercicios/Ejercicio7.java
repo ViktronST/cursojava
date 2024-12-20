@@ -42,7 +42,8 @@ public class Ejercicio7 {
 //			for(int j=0 ; j<numeros[i].length ; j++) {
 //				if(i==j) {
 //					System.out.print(numeros[i][j] + "\t");
-//				}
+//				}else {
+//					System.out.println("*\t");
 //			}
 //		}
 //		System.out.println("");

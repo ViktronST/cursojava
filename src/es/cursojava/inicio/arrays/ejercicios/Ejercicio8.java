@@ -96,9 +96,6 @@ public class Ejercicio8 {
                                 break;
                             }
                         }
-                        if (borrado) {
-                        	break;
-                        }
                     }
 
                     if (!borrado) {
