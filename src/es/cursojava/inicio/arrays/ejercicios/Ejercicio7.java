@@ -37,6 +37,16 @@ public class Ejercicio7 {
 			System.out.print(numeros[i][i]+", ");
 		}
 		
+//		System.out.print("\nNúmeros en la diagonal invertida: ");
+//		for(int i=0 ; i<numeros.length ; i++) {
+//			for(int j=0 ; j<numeros[i].length ; j++) {
+//				if(i==j) {
+//					System.out.print(numeros[i][j] + "\t");
+//				}
+//			}
+//		}
+//		System.out.println("");
+		
 		for(int i=0 ; i<numeros.length/2 ; i++) {
 			int numAux = numeros[i][i];
 			numeros[i][i] = numeros[numeros.length-1-i][numeros.length-1-i];

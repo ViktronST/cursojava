@@ -23,6 +23,12 @@ public class Ejercicio6 {
 			}
 		}
 		
+//		for(int i=0 ; i<numeros.length ; i++) {
+//			for(int j=0 ; j<numeros[i].length ; j++) {
+//				numeros[i][j] = (int)(Math.random()*100)+1;
+//			}
+//		}
+		
 		System.out.println("\n- - - Matríz - - -");
 		for(int i=0 ; i<numeros.length ; i++) {
 			for(int j=0 ; j<numeros[i].length ; j++) {
