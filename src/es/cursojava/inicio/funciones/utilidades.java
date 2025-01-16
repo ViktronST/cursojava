@@ -21,10 +21,12 @@ public class utilidades {
 	}
 	
 	public static void pintaMenu(String[] texto) {
+		System.out.println("");
 		System.out.println("* * * * MENÚ * * * *");
 		System.out.println("Elige una opción");
-		System.out.println("1. ");
-		System.out.println("2. ");
-		System.out.println("3. ");
+		System.out.println("1. " + texto[0]);
+		System.out.println("2. " + texto[1]);
+		System.out.println("3. " + texto[2]);
+
 	}
 }
