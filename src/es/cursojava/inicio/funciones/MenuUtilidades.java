@@ -8,10 +8,22 @@ public class MenuUtilidades {
         int opcion;
         final int OPCION_SALIR = 5;
 
+        String[] opcionesMenu = {
+            "\n = = = MENÚ = = =",
+            "1. Introducir Datos de los Alumnos",
+            "2. Mostrar Alumnos por Aula",
+            "3. Buscar Alumno",
+            "4. Borrar Alumno",
+            "5. Salir"
+        };
+
+        // OTRAS MANERAS DE PINTAR EL MENU, EL MÉTODO SE ECUENTRA EN Utilidades2
+        //String opcinesStr = "\n = = = MENÚ = = =\n1. Introducir Datos de los Alumnos\n2. Mostrar Alumnos por Aula\n3. Buscar Alumno\n4. Borrar Alumno\n5. Salir";
+        //String opcinesStr = "\n = = = MENÚ = = =;1. Introducir Datos de los Alumnos;2. Mostrar Alumnos por Aula;3. Buscar Alumno;4. Borrar Alumno;5. Salir";
+
         do {
-        	String[] opcionesMenu = {"\n = = = MENÚ = = =", "1. Introducir Datos de los Alumnos", "2. Mostrar Alumnos por Aula",
-        			"3. Buscar Alumno", "4. Borrar Alumno", "5. Salir"};
             Utilidades2.pintarMenu(opcionesMenu);
+            // Utilidades2.pintaMenu(opcionesStr);
             opcion = Utilidades2.pideDatoNumerico("Introduce una opción: ");
 
             switch (opcion) {

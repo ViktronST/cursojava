@@ -20,11 +20,23 @@ public class Utilidades2 {
 		return cadena;
 	}
 	
+    /**
+     * Funcion que sirve para pintar las opciones de un menu que llegan en un array de Strings.
+     * @param menuArray: Array de Strings con las opciones del menu
+     * @autor: Viktor
+     * @since: 1.0
+     */
 	public static void pintarMenu(String[] menuArray) {
 		for (String opcion : menuArray) {
 			System.out.println(opcion);
 		}
 	}
+
+    // OTRA MANERA DE PINTAR EL MENU
+    // public static void pintaMenu (String menuStr){
+    //     String[] opciones = menuStr.split(";");
+    //     pintarMenu(opciones);
+    // }
 	
 	public static void datosAlumnos (String[][] aulas){
         for (int i = 0; i < aulas.length; i++) {
@@ -45,6 +57,12 @@ public class Utilidades2 {
 		}
 	}
 
+    /**
+     * Funcion que sirve para busca un alumno en las aulas de un colegio que llegan en un array de Strings.
+     * @param aulas
+     * @autor: Viktor
+     * @since: 1.0
+     */
 	public static void buscarAlumno (String[][] aulas){
 		pideDatoCadena("Introduce el nombre del alumno que deseas buscar: ");
         String nombreBuscado = pideDatoCadena("");
