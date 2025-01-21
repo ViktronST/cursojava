@@ -1,10 +1,11 @@
 package es.cursojava.POO;
 
+//POJO 
 public class Alumno {
     private String nombre;
     private String apellido;
-    private String edad;
-    private int notaMedia;
+    private int edad;
+    private double notaMedia;
     private String email;
     private String[] asignaturas;
     
@@ -14,7 +15,7 @@ public class Alumno {
     }
 
     //Constructor A
-    public Alumno(String nombre, String apellido, String edad, int notaMedia, String email) {
+    public Alumno(String nombre, String apellido, int edad, double notaMedia, String email) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -23,7 +24,7 @@ public class Alumno {
     }
 
     //Constructor B
-    public Alumno(String nombre, String apellido, String edad, int notaMedia, String email, String[] asignaturas) {
+    public Alumno(String nombre, String apellido, int edad, double notaMedia, String email, String[] asignaturas) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
@@ -34,15 +35,15 @@ public class Alumno {
 
     //Método estudiar
     public void estudiar() {
-        if (notaMedia == 0) {
+        if (this.notaMedia == 0) {
             System.out.println("El alumno " + nombre + " " + apellido + " no estudia nada.");
-        } else if (notaMedia < 5) {
+        } else if (this.notaMedia < 5) {
             System.out.println("El alumno " + nombre + " " + apellido + " estudia muy poco.");
-        } else if (notaMedia < 7) {
+        } else if (this.notaMedia < 7) {
             System.out.println("El alumno " + nombre + " " + apellido + " es buen estudiante.");
-        } else if (notaMedia < 10) {
+        } else if (this.notaMedia < 10) {
             System.out.println("El alumno " + nombre + " " + apellido + " es muy buen estudiante.");
-        } else if (notaMedia == 10) {
+        } else if (this.notaMedia == 10) {
             System.out.println("El alumno " + nombre + " " + apellido + " es un genio.");
         } else {
             System.out.println("Nota Media incorrecta.");
@@ -68,20 +69,20 @@ public class Alumno {
     }
 
     //Getters y Setters de edad
-    public String getEdad() {
+    public int getEdad() {
         return edad;
     }
 
-    public void setEdad(String edad) {
+    public void setEdad(int edad) {
         this.edad = edad;
     }
 
     //Getters y Setters de notaMedia
-    public int getNotaMedia() {
+    public double getNotaMedia() {
         return notaMedia;
     }
 
-    public void setNotaMedia(int notaMedia) {
+    public void setNotaMedia(double notaMedia) {
         this.notaMedia = notaMedia;
     }
 
