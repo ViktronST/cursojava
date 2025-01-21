@@ -1,4 +1,4 @@
-package es.cursojava.inicio.POO;
+package es.cursojava.POO;
 
 //POJO (Plain Old Java Object): Clase que solo tiene atributos y métodos getter y setter.
 public class Persona {
