@@ -2,7 +2,6 @@ package es.cursojava.inicio.arrays.ejercicios;
 import java.util.Scanner;
 
 public class Ejercicio4 {
-
 	public static void main(String[] args) {
 	
 //		Ahoracado

@@ -1,4 +1,4 @@
-package es.cursojava.inicio.funciones;
+package es.cursojava.inicio.POO;
 
 public class PruebasPersona {
     public static void main(String[] args) {
