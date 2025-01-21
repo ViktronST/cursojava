@@ -7,7 +7,7 @@ public class Persona {
     private String dni;
     private double peso;
 
-    //Constructor vacío
+    //Constructor por defecto
     public Persona() {
 
     }
