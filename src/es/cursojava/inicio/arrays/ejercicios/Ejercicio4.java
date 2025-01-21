@@ -15,14 +15,14 @@ public class Ejercicio4 {
 //			+ Si acierta la palabra entera antes de perder todas las vidas habrá ganado
 //			+ Si pierde todas las vidas sin acertar la palabra habrá perdido
 		
-		String[] palabras = {"destornillador","monitor","pirata","murciélago","metamorfosis",};
+		String[] palabras = {"destornillador","monitor","pirata","murciélago","metamorfosis"};
 		
 		int random = (int)(Math.random()*5);
 		String palabraJuego = palabras[random];
 		
 		String[] palabraOculta = palabraJuego.split("");
 		System.out.println(palabraJuego);               //Nos muestra la palabra.
-		System.out.println(palabraOculta.length);
+		System.out.println(palabraOculta.length); 	    //Nos muestra la longitud de la palabra.
 		
 		int vidas = 6;
 		String letraPropuesta = "";                		//Letras guardadas.
