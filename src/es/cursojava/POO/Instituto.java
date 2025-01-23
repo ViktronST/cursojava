@@ -19,13 +19,13 @@ public class Instituto {
         String[] asignaturasAlumno2 = {"Matemáticas", "Lengua", "Inglés", "Física", "Química", "Historia"};
         alumno2.setAsignaturas(asignaturasAlumno2);
 
+        String[] asignaturasAlumno3 = {"Matemáticas", "Lengua", "Inglés", "Física", "Química", "Filosofía"};
         Alumno alumno3 = new Alumno("Ana", "Sánchez", 20, 3, "sanchez2222@gmail.com", asignaturasAlumno3);
         // alumno3.setNombre("Ana");
         // alumno3.setApellido("Sánchez");
         // alumno3.setEdad(20);
         // alumno3.setNotaMedia(3);
         // alumno3.setEmail("sanchez2222@gmail.com");
-        String[] asignaturasAlumno3 = {"Matemáticas", "Lengua", "Inglés", "Física", "Química", "Filosofía"};
 
         Alumno alumno4 = new Alumno();
         alumno4.setNombre("Juan");
@@ -40,6 +40,5 @@ public class Instituto {
         alumnos[1] = alumno2.getNombre();
         alumnos[2] = alumno3.getNombre();
         alumnos[3] = alumno4.getNombre();
-
     }
 }
