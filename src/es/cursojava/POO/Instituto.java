@@ -53,17 +53,17 @@ public class Instituto {
         }
         
         //for each
-        for (Alumno alunmno : alumnos) {
-            Alumno alumno = alumnos[i];
-            System.out.println(alumno.getNombre);
-            alumno.estudiar();
+        // for (Alumno alunmno : alumnos) {
+        //     Alumno alumno = alumnos[i];
+        //     System.out.println(alumno.getNombre);
+        //     alumno.estudiar();
 
-            String[] asigns = alumno.getAsignaturas();
-            if(asigns!=null) {
-                for (String asignatura : asigns) {
-                    System.out.println("\t" + asignatura);
-                }
-            }        
-        }
+        //     String[] asigns = alumno.getAsignaturas();
+        //     if(asigns!=null) {
+        //         for (String asignatura : asigns) {
+        //             System.out.println("\t" + asignatura);
+        //         }
+        //     }        
+        // }
     }
 }
