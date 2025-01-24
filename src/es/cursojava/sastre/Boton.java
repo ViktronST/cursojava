@@ -12,7 +12,7 @@ public class Boton {
         this.tamanio = tamanio;
         this.forma = forma;
     }
-    
+
     //Getters y Setters
     public String getColor() {
         return color;
@@ -22,11 +22,11 @@ public class Boton {
         this.color = color;
     }
 
-    public String getTamaño() {
+    public String getTamanio() {
         return tamanio;
     }
 
-    public void setTamaño(String tamanio) {
+    public void setTamanio(String tamanio) {
         this.tamanio = tamanio;
     }
 
