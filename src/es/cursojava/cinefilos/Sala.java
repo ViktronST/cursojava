@@ -3,10 +3,10 @@ package es.cursojava.cinefilos;
 public class Sala {
     private int numero;
     private String tituloPelicula;
-    private int butacas[][];
+    private String butacas[][];
 
     //Constructor con parámetros
-    public Sala(int numero, String tituloPelicula, int butacas[][]){
+    public Sala(int numero, String tituloPelicula, String butacas[][]){
         this.numero = numero;
         this.tituloPelicula = tituloPelicula;
         this.butacas = butacas;
@@ -29,11 +29,11 @@ public class Sala {
         this.tituloPelicula = tituloPelicula;
     }
 
-    public int[][] getButacas() {
+    public String[][] getButacas() {
         return butacas;
     }
 
-    public void setButacas(int[][] butacas) {
+    public void setButacas(String[][] butacas) {
         this.butacas = butacas;
     }
 
