@@ -9,21 +9,28 @@ public class Maniqui {
 
     //Creamos 3 cosntructores
     // 1. Contructor que inicialice con pantalón y camisa.
-    public Maniqui(Pantalon pantalon, Camisa camisa) {
-        this.id = 903071;
+    public Maniqui(int id, Pantalon pantalon, Camisa camisa) {
+        this.id = id;
         this.pantalon = pantalon;
         this.camisa = camisa;
     }
 
     // 2. Contructor que inicialice con vestido.
-    public Maniqui(Vestido vestido) {
-        this.id = 923273;
+    public Maniqui(int id, Vestido vestido) {
+        this.id = id;
         this.vestido = vestido;
     }
 
     // 3. Constructor por defecto
-    public Maniqui() {
-        this.id = 993377;
+    public Maniqui(int id) {
+        this.id = id;
+    }
+
+    //Desreferenciamos a los objetos maniqui para desvestirlos
+    public void desvestir(){
+        this.camisa = null;
+        this.pantalon = null;
+        this.vestido = null;
     }
 
     //Getters y Setters
@@ -31,9 +38,9 @@ public class Maniqui {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    // public void setId(int id) {          //Para no cambiar el id
+    //     this.id = id;
+    // }
 
     public Pantalon getPantalon() {
         return pantalon;
@@ -59,5 +66,4 @@ public class Maniqui {
         this.vestido = vestido;
     }
 
-    
 }

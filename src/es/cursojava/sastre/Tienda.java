@@ -15,7 +15,7 @@ public class Tienda {
         Vestido vestido1 = new Vestido("verde", 30.0, "L");
 
         System.out.println("=====================================");
-        Maniqui maniqui1 = new Maniqui(pantalon1, camisa1);
+        Maniqui maniqui1 = new Maniqui(902030, pantalon1, camisa1);
         System.out.println("Maniquí 1: " + maniqui1.getId());
         //Vestimos al maniqui1 con un pantalon y una camisa
         System.out.println("Pantalón: " + maniqui1.getPantalon().getColor() +
@@ -35,21 +35,21 @@ public class Tienda {
         //                " | Forma = " + botonesCamisa.getForma());
 
         System.out.println("=====================================");
-        Maniqui maniqui2 = new Maniqui(vestido1);
+        Maniqui maniqui2 = new Maniqui(922232, vestido1);
         System.out.println("Maniquí 2: " + maniqui2.getId());
         //Vestimos al maniqui2 con un vestido
         System.out.println("Vestido: " + maniqui2.getVestido().getColor() +
                             " | Talla: " + vestido1.getTalla());
 
         System.out.println("=====================================");
-        Maniqui maniqui3 = new Maniqui();
+        Maniqui maniqui3 = new Maniqui(992233);
         System.out.println("Maniquí 3: " + maniqui3.getId());
 
     }
     
     //Método abrirTienda() → donde se van a generar todos los objetos (no tiene que ser estático).
     public void abrirTienda() {
-    
+
     }
     
     //Métedo mostrarEscaparate() → donde se van a mostrar a los maniquíes vestidos.
