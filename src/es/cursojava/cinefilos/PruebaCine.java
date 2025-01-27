@@ -8,9 +8,9 @@ public class PruebaCine {
         Sala sala2 = new Sala(2, "Tennet", "30");
         Sala sala3 = new Sala(3, "Los Odiosos 8", "30");
         
-        Espectador espectador = new Espectador("Juan", 20405060L);
-        Espectador espectador = new Espectador("María", 10509070H);
-        Espectador espectador = new Espectador("Ivan", 85274163Z);
+        Espectador espectador1 = new Espectador("Juan", 20405060L);
+        Espectador espectador2 = new Espectador("María", 10509070H);
+        Espectador espectador3 = new Espectador("Ivan", 85274163Z);
         
     }
 }
