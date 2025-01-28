@@ -1,13 +1,13 @@
-package es.cursojava.cinefilos;
+package es.cursojava.POO.cinefilos;
 
-public class Espectador {
+public class Cine {
     private String nombre;
-    private String dni;
+    private int sala[];
 
     //Constructor con parámetros
-    public Espectador(String nombre, String dni){
+    public Cine(String nombre, int sala[]){
         this.nombre = nombre;
-        this.dni = dni;
+        this.sala = sala;
     }
 
     //Getters y Setters
@@ -19,11 +19,11 @@ public class Espectador {
         this.nombre = nombre;
     }
 
-    public String getDni(){
-        return dni;
+    public int[] getSala(){
+        return sala;
     }
 
-    public void setDni(String dni){
-        this.dni = dni;
+    public void setSala(int sala[]){
+        this.sala = sala;
     }
 }

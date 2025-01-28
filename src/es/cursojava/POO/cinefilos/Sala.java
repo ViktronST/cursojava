@@ -1,4 +1,4 @@
-package es.cursojava.cinefilos;
+package es.cursojava.POO.cinefilos;
 
 public class Sala {
     private int numero;

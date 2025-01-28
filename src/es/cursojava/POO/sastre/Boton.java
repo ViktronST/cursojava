@@ -1,4 +1,4 @@
-package es.cursojava.sastre;
+package es.cursojava.POO.sastre;
 
 public class Boton {
     //Creamos la clase botón con los atributos color, tamaño y forma.

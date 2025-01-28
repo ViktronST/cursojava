@@ -1,4 +1,4 @@
-package es.cursojava.sastre;
+package es.cursojava.POO.sastre;
 
 public class Tienda {
     public static void main(String[] args) {

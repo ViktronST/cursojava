@@ -1,4 +1,4 @@
-package es.cursojava.sastre;
+package es.cursojava.POO.sastre;
 
 public class Maniqui {
     //Creamos la clase maniquí con los atributos id (identificador), pantalón, camisa y vestido.

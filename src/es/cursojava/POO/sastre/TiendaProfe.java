@@ -1,4 +1,4 @@
-package es.cursojava.sastre;
+package es.cursojava.POO.sastre;
 
 public class TiendaProfe {
     

@@ -1,4 +1,4 @@
-package es.cursojava.sastre;
+package es.cursojava.POO.sastre;
 
 public class Camisa {
     //Creamos la clase camisa con los atributos color, precio, talla y botón.

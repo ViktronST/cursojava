@@ -1,16 +1,18 @@
-package es.cursojava.sastre;
+package es.cursojava.POO.sastre;
 
-public class Vestido {
-    //Creamos la clase vestido con los atributos color, precio y talla.
+public class Pantalon {
+    //Creamos la clase pantalón con los atributos color, precio, talla y botón.
     private String color;
     private double precio;
     private String talla;
+    private Boton boton;
     
     //Constructor con parámetros
-    public Vestido(String color, double precio, String talla){
+    public Pantalon(String color, double precio, String talla, Boton boton) {
         this.color = color;
         this.precio = precio;
         this.talla = talla;
+        this.boton = boton;
     }
 
     //Getters y Setters
@@ -37,5 +39,14 @@ public class Vestido {
     public void setTalla(String talla) {
         this.talla = talla;
     }
+
+    public Boton getBoton() {
+        return boton;
+    }
+
+    public void setBoton(Boton boton) {
+        this.boton = boton;
+    }
+
     
 }
