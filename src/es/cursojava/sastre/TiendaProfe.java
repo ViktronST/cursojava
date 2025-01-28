@@ -4,12 +4,12 @@ public class TiendaProfe {
     
     private String nombre;
 
-    public Tienda(String nombre){
+    public TiendaProfe(String nombre){
         this.nombre = nombre;
     }
     
     public static void main(String[] args) {
-        Tienda tienda = new Tienda("El perrito faldero");
+        TiendaProfe tienda = new TiendaProfe("El perrito faldero");
         Maniqui[] maniquies = tienda.abrirTienda();
         tienda.mostrarEscaparate(maniquies);
     }
@@ -35,10 +35,10 @@ public class TiendaProfe {
         Maniqui maniqui2 = new Maniqui(902030, pantalon, camisa1);
         Maniqui maniqui3 = new Maniqui(992233);
 
-        Boton b = maniqui2.getCamisa().getBoton()[0];
-        System.out.println(b.getColor());
-        System.out.println(b.getForma());
-        System.out.println(b.getTamanio());
+        // Boton b = maniqui2.getCamisa().getBoton()[0];
+        // System.out.println(b.getColor());
+        // System.out.println(b.getForma());
+        // System.out.println(b.getTamanio());
 
         Maniqui[] maniquies = {maniqui1, maniqui2, maniqui3};
 
@@ -62,12 +62,19 @@ public class TiendaProfe {
             }
             
             Camisa camisa = maniqui.getCamisa();
-            if(camisa!=null){
-                System.out.println("- Camisa:");
-                System.out.println("\t Color: " + camisa.getColor());
-                System.out.println("\t Talla: " + camisa.getTalla());
-                System.out.println("\t Precio: " + camisa.getPrecio());
-                System.out.println("\t Botón: " + camisa.getBoton());
+            if (camisa!=null){
+                System.out.println("Camisa:");
+                System.out.println("\t Color: "+ camisa.getColor());
+                System.out.println("\t Talla: "+ camisa.getTalla());
+                System.out.println("\t Precio: "+ camisa.getPrecio());
+                Boton[] botones = camisa.getBoton();
+                if (botones!=null){
+                    for (Boton boton : botones) {
+                        System.out.println("\t\t Boton: "+ boton.getColor() +" "+ boton.getForma() 
+                        +" "+ boton.getTamanio() );
+                        
+                    }
+                }
                 precioTotal += camisa.getPrecio();
             }
 
@@ -79,6 +86,7 @@ public class TiendaProfe {
                 System.out.println("\t Precio: " + vestido.getPrecio());
                 precioTotal += vestido.getPrecio();
             }
+            System.out.println("Precio total: "+precioTotal);
         }
     }
 

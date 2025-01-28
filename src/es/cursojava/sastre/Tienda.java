@@ -47,18 +47,4 @@ public class Tienda {
 
     }
     
-    //Método abrirTienda() → donde se van a generar todos los objetos (no tiene que ser estático).
-    public void abrirTienda() {
-
-    }
-    
-    //Métedo mostrarEscaparate() → donde se van a mostrar a los maniquíes vestidos.
-    public void mostrarEscaparate() {
-
-    }
-
-    //Método cerrarTienda() → donde se van a cerrar la tienda y se van a desvestir a los maniquíes.
-    public void cerrarTienda() {
-
-    }
 }
