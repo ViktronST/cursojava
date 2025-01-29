@@ -41,7 +41,7 @@ public class Sala {
             return "Asiento fuera de rango.";
         }
     }
-}
+
 
     //Getters y Setters.
     public int getNumero() {
@@ -68,5 +68,4 @@ public class Sala {
         this.butacas = butacas;
     }
     
-
 }

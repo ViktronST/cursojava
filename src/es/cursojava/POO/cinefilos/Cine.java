@@ -39,12 +39,12 @@ public class Cine {
                 break;
             }
 
-            if (sala.reservarAsiento(fila, columna)) {
-                System.out.println("Asiento reservado.");
-            } else {
-                System.out.println("El asiento ya está ocupado.");
-                i--; //Para volver a reservar otro asiento.
-            }
+            // if (sala.reservarAsiento(fila, columna)) {
+            //     System.out.println("Asiento reservado.");
+            // } else {
+            //     System.out.println("El asiento ya está ocupado.");
+            //     i--; //Para volver a reservar otro asiento.
+            // }
         }
         
         //Mostrar asientos reservados.
@@ -60,9 +60,9 @@ public class Cine {
             int entradasVendidas = 0;
             for (String[] fila : sala.getButacas()) {
                 for (String asiento : fila) {
-                    if (!asiento) { //Por si el asiento está ocupado.
-                        entradasVendidas++;
-                    }
+                    // if (!asiento) { //Por si el asiento está ocupado.
+                    //     entradasVendidas++;
+                    // }
                 }
             }
 
