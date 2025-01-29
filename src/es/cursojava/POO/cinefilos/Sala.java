@@ -10,9 +10,9 @@ public class Sala {
         this.numero = numero;
         this.tituloPelicula = tituloPelicula;
         butacas = new boolean[filas][columnas];
-        // Inicializar todas las butacas como libres
-        for (int i = 0; i < filas; i++) {
-            for (int j = 0; j < columnas; j++) {
+        //Inicializamos todas las butacas como libres
+        for (int i = 1; i < filas; i++) {
+            for (int j = 1; j < columnas; j++) {
                 butacas[i][j] = true;
             }
         }
@@ -20,16 +20,16 @@ public class Sala {
 
     public void mostrarAsientosLibres() {
         System.out.println("Asientos libres para " + tituloPelicula + ":");
-        for (int i = 0; i < butacas.length; i++) {
-            for (int j = 0; j < butacas[i].length; j++) {
-                System.out.print(butacas[i][j] ? "O" : "X");
+        for (int i = 1; i < butacas.length; i++) {
+            for (int j = 1; j < butacas[i].length; j++) {
+                System.out.print(butacas[i][j] ? "O" : "X");  //Si está ocupado, muestra "X"
             }
             System.out.println();
         }
     }
 
     public boolean reservarAsiento(int fila, int columna) {
-        if (fila >= 0 && fila < butacas.length && columna >= 0 && columna < butacas[fila].length) {
+        if (fila >= 1 && fila < butacas.length && columna >= 1 && columna < butacas[fila].length) {
             if (butacas[fila][columna]) {
                 butacas[fila][columna] = false;
                 return true;
@@ -46,6 +46,10 @@ public class Sala {
         return numero;
     }
 
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
     public String getTituloPelicula() {
         return tituloPelicula;
     }
@@ -57,5 +61,10 @@ public class Sala {
     public boolean[][] getButacas() {
         return butacas;
     }
+
+    public void setButacas(boolean[][] butacas) {
+        this.butacas = butacas;
+    }
+    
 
 }
