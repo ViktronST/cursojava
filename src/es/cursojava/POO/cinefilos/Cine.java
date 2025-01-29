@@ -1,7 +1,6 @@
 package es.cursojava.POO.cinefilos;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class Cine {
     private String nombre;
@@ -32,9 +31,6 @@ public class Cine {
 
         System.out.println("Resumen de ventas:");
 
-        // Mapa para almacenar las ventas por película
-        Map<String, Integer> ventasPorPelicula = new HashMap<>();
-
         for (Sala sala : salas) {
             int entradasVendidas = 0;
             for (boolean[] fila : sala.butacas) {
@@ -50,24 +46,8 @@ public class Cine {
             System.out.println("Sala " + sala.numero + ": " + sala.tituloPelicula);
             System.out.println("  Entradas vendidas: " + entradasVendidas);
             System.out.println("  Ingreso total: $" + ingresoTotal);
-
-            // Agregar las ventas de la película al mapa
-            ventasPorPelicula.put(sala.tituloPelicula, entradasVendidas);
         }
 
-        // Encontrar la película más vendida
-        String peliculaMasVendida = "";
-        int maxEntradas = 0;
-        for (Map.Entry<String, Integer> entry : ventasPorPelicula.entrySet()) {
-            if (entry.getValue() > maxEntradas) {
-                maxEntradas = entry.getValue();
-                peliculaMasVendida = entry.getKey();
-            }
-        }
-
-        System.out.println("Película más vendida: " + peliculaMasVendida + " con " + maxEntradas + " entradas vendidas.");
-
-    
     }
 
     //Getters y Setters
