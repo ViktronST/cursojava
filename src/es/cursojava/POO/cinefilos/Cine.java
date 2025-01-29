@@ -6,13 +6,13 @@ public class Cine {
     private String nombre;
     private Sala[] salas;
 
-    //Constructor por parámetros
+    //Constructor por parámetros.
     public Cine(String nombre, int numSalas) {
         this.nombre = nombre;
         salas = new Sala[numSalas];
-        salas[0] = new Sala(1, "Avatar", 10, 15);
-        salas[1] = new Sala(2, "Tennet", 8, 12);
-        salas[2] = new Sala(3, "Los Odiosos 8", 12, 18);
+        salas[0] = new Sala(1, "Avatar", 5, 5);
+        salas[1] = new Sala(2, "Tennet", 5, 5);
+        salas[2] = new Sala(3, "Los Odiosos 8", 5, 5);
     }
 
     public Sala buscarSalaPorPelicula(String pelicula) {
@@ -24,30 +24,30 @@ public class Cine {
         return null;
     }
 
-    public void reservarAsientos(Sala sala, int numEntradas) {
+    public void reservarAsiento(Sala sala, int numEntradas) {
         Scanner scanner = new Scanner(System.in);
 
         for (int i = 0; i < numEntradas; i++) {
-            System.out.print("Ingrese la fila (o 0 para salir): ");
+            System.out.print("Ingresa la fila: ");
             int fila = scanner.nextInt();
             if (fila == 0) {
                 break;
             }
-            System.out.print("Ingrese el asiento (o 0 para salir): ");
-            int asiento = scanner.nextInt();
-            if (asiento == 0) {
+            System.out.print("Ingresa el asiento: ");
+            int columna = scanner.nextInt();
+            if (columna == 0) {
                 break;
             }
 
-            if (sala.reservarAsiento(fila, asiento)) {
+            if (sala.reservarAsiento(fila, columna)) {
                 System.out.println("Asiento reservado.");
             } else {
                 System.out.println("El asiento ya está ocupado.");
-                i--; //Para volver a reservar otro asiento
+                i--; //Para volver a reservar otro asiento.
             }
         }
         
-        //Mostrar asientos reservados
+        //Mostrar asientos reservados.
         sala.mostrarAsientosLibres();
     }
 
@@ -58,9 +58,9 @@ public class Cine {
 
         for (Sala sala : salas) {
             int entradasVendidas = 0;
-            for (boolean[] fila : sala.getButacas()) {
-                for (boolean asiento : fila) {
-                    if (!asiento) { //Si el asiento está ocupado
+            for (String[] fila : sala.getButacas()) {
+                for (String asiento : fila) {
+                    if (!asiento) { //Por si el asiento está ocupado.
                         entradasVendidas++;
                     }
                 }
@@ -70,12 +70,12 @@ public class Cine {
 
             System.out.println("Sala " + sala.getNumero() + ": " + sala.getTituloPelicula());
             System.out.println("  Entradas vendidas: " + entradasVendidas);
-            System.out.println("  Ingreso total: €" + ingresoTotal);
+            System.out.println("  Ingreso total: " + ingresoTotal + " euros.");
         }
 
     }
 
-    //Getters y Setters
+    //Getters y Setters.
     public String getNombre() {
         return nombre;
     }
