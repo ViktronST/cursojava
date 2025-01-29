@@ -6,13 +6,19 @@ public class Cine {
     private String nombre;
     private Sala[] salas;
 
-    //Constructor por parámetros.
     public Cine(String nombre, int numSalas) {
         this.nombre = nombre;
         salas = new Sala[numSalas];
         salas[0] = new Sala(1, "Avatar", 5, 5);
         salas[1] = new Sala(2, "Tennet", 5, 5);
         salas[2] = new Sala(3, "Los Odiosos 8", 5, 5);
+    }
+
+    public void mostrarCartelera() {
+        System.out.println("Cartelera del cine " + nombre + ":");
+        for (Sala sala : salas) {
+            System.out.println("Sala " + sala.getNumero() + ": " + sala.getTituloPelicula());
+        }
     }
 
     public Sala buscarSalaPorPelicula(String pelicula) {
@@ -24,55 +30,42 @@ public class Cine {
         return null;
     }
 
-    public void reservarAsiento(Sala sala, int numEntradas) {
+    public void reservarAsientos(Sala sala, int numEntradas, Espectador espectador) {
         Scanner scanner = new Scanner(System.in);
 
         for (int i = 0; i < numEntradas; i++) {
-            System.out.print("Ingresa la fila: ");
-            int fila = scanner.nextInt();
-            if (fila == 0) {
-                break;
-            }
-            System.out.print("Ingresa el asiento: ");
-            int columna = scanner.nextInt();
-            if (columna == 0) {
-                break;
-            }
-
-            // if (sala.reservarAsiento(fila, columna)) {
-            //     System.out.println("Asiento reservado.");
-            // } else {
-            //     System.out.println("El asiento ya está ocupado.");
-            //     i--; //Para volver a reservar otro asiento.
-            // }
+            int fila, asiento;
+            do {
+                System.out.print("Ingrese la fila (o 0 para salir): ");
+                fila = scanner.nextInt();
+                if (fila == 0) return;
+                System.out.print("Ingrese el asiento (o 0 para salir): ");
+                asiento = scanner.nextInt();
+                if (asiento == 0) return;
+            } while (!sala.reservarAsiento(fila - 1, asiento - 1, espectador));
+            
+            System.out.println("Asiento reservado.");
         }
         
-        //Mostrar asientos reservados.
-       // sala.mostrarAsientosLibres();
+        sala.mostrarAsientosLibres();
     }
 
     public void mostrarResumenVentas() {
         double precioEntrada = 7.50;
-
         System.out.println("Resumen de ventas:");
 
         for (Sala sala : salas) {
             int entradasVendidas = 0;
-            for (String[] fila : sala.getButacas()) {
-                for (String asiento : fila) {
-                    // if (!asiento) { //Por si el asiento está ocupado.
-                    //     entradasVendidas++;
-                    // }
+            for (Espectador[] fila : sala.getButacas()) {
+                for (Espectador asiento : fila) {
+                    if (asiento != null) entradasVendidas++;
                 }
             }
-
             double ingresoTotal = entradasVendidas * precioEntrada;
-
             System.out.println("Sala " + sala.getNumero() + ": " + sala.getTituloPelicula());
             System.out.println("  Entradas vendidas: " + entradasVendidas);
-            System.out.println("  Ingreso total: " + ingresoTotal + " euros.");
+            System.out.println("  Ingreso total: €" + ingresoTotal);
         }
-
     }
 
     //Getters y Setters.
