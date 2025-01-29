@@ -3,13 +3,13 @@ package es.cursojava.POO.cinefilos;
 public class Sala {
     private int numero;
     private String tituloPelicula;
-    private String[][] butacas;
+    private Espectador[][] butacas;
 
     // Constructor con parámetros.
     public Sala(int numero, String tituloPelicula, int filas, int columnas) {
         this.numero = numero;
         this.tituloPelicula = tituloPelicula;
-        butacas = new String[filas][columnas];
+        butacas = new Espectador[filas][columnas];
 
         //Inicializamos todas las butacas como "L" (Libre).
         for (int i = 0; i < filas; i++) {
@@ -17,6 +17,12 @@ public class Sala {
                 butacas[i][j] = "L";
             }
         }
+    }
+
+    public Sala(int numero, String tituloPelicula, Espectador[][] butacas){
+        this.numero  = numero;
+        this.tituloPelicula = tituloPelicula;
+        this.butacas = butacas;
     }
 
     // public void mostrarAsientosLibres() {
