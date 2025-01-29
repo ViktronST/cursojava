@@ -35,7 +35,7 @@ public class PruebaCine {
             }
 
             //Mostramos los asientos libres.
-            sala.mostrarAsientosLibres();
+            // sala.mostrarAsientosLibres();
             
             //Reservamos los asientos.
             cine.reservarAsiento(sala, numEntradas);

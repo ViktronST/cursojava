@@ -48,7 +48,7 @@ public class Cine {
         }
         
         //Mostrar asientos reservados.
-        sala.mostrarAsientosLibres();
+       // sala.mostrarAsientosLibres();
     }
 
     public void mostrarResumenVentas() {
