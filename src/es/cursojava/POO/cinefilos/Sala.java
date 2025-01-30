@@ -1,5 +1,7 @@
 package es.cursojava.POO.cinefilos;
 
+// import java.util.Arrays;
+
 public class Sala {
     private int numero;
     private String tituloPelicula;
@@ -41,12 +43,17 @@ public class Sala {
         this.butacas = butacas;
     }
 
+    // @Override
+    // public String toString() {
+    //     return "Sala [numero=" + numero + ", tituloPelicula=" + tituloPelicula + ", butacas=" + Arrays.toString(butacas) + "]";
+    // }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Sala ");
         sb.append("").append(numero);
-        sb.append(", tituloPelicula=").append(tituloPelicula);
+        sb.append(", Pelicula = ").append(tituloPelicula);
         sb.append("");
         return sb.toString();
     }

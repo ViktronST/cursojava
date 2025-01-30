@@ -19,6 +19,11 @@ public class Espectador {
         return dni;
     }
 
+    // @Override
+    // public String toString() {
+    //     return "Espectador [nombre=" + nombre + ", dni=" + dni + "]";
+    // }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -29,4 +34,5 @@ public class Espectador {
         return sb.toString();
     }
 
+    
 }
