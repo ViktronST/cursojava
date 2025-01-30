@@ -31,6 +31,7 @@ public class PruebaCine {
         Cine cine = crearCine();
         Espectador[] espectadores = creaEspectadores();
         gestionEntradas(cine, espectadores);
+        resumen(cine);
     }
 
     private void gestionEntradas(Cine cine, Espectador[] espectadores){
@@ -48,6 +49,8 @@ public class PruebaCine {
     //Hay que meter una variación para las butacas YA reservadas.
     //También si el espectador elige una butaca inexistente.
     //Y vovler a preguntarle sobre su elección, en ambos casos.
+    //Mostrar las butacas reservadas después de que las reserve el espectador.
+    //Mostrar el precio total de las entradas que va a pagar.
     private void reservaButacas(Espectador[][] butacas, Espectador espectador){
         int numEntradas = Utilidades.pideDatoNumerico(espectador.getNombre() + ", ¿Cuántas entradas quieres? ");
         String nombreEspectador = espectador.getNombre();
@@ -58,7 +61,6 @@ public class PruebaCine {
             butacas[fila-1][columna-1] = espectador; 
         }
         System.out.println("Butacas reservadas para " + nombreEspectador);
-        
     }
 
     private void mostrarCartelera (Cine cine){
@@ -87,6 +89,27 @@ public class PruebaCine {
             System.out.println("");
         }
 
+    }
+
+    private void resumen (Cine cine){
+        System.out.println("\nCINE: " + cine.getNombre());
+
+        Sala[] salasCine = cine.getSalas();
+        for (Sala sala : salasCine) {
+
+            System.out.println("\t" + sala.toString());
+
+            Espectador[][] butacas = sala.getButacas();
+            for (Espectador[] filaEspectadores : butacas) {
+
+                for(Espectador columnaEspectadores : filaEspectadores){
+                    
+                    if(columnaEspectadores!=null){
+                        System.out.println("\t\t" + columnaEspectadores);
+                    }                    
+                }
+            }
+        }
     }
     
 }
