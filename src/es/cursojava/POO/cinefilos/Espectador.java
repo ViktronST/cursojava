@@ -19,4 +19,14 @@ public class Espectador {
         return dni;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Espectador{");
+        sb.append("nombre=").append(nombre);
+        sb.append(", dni=").append(dni);
+        sb.append('}');
+        return sb.toString();
+    }
+
 }

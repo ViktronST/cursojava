@@ -8,38 +8,46 @@ public class Sala {
     public Sala(int numero, String tituloPelicula, int filas, int columnas) {
         this.numero = numero;
         this.tituloPelicula = tituloPelicula;
-        butacas = new Espectador[filas][columnas];
+        this.butacas = new Espectador[filas][columnas];
     }
 
-    public void mostrarAsientosLibres() {
-        System.out.println("Asientos libres para " + tituloPelicula + ":");
-        for (Espectador[] fila : butacas) {
-            for (Espectador asiento : fila) {
-                System.out.print(asiento == null ? "O" : "X");
-            }
-            System.out.println();
-        }
-    }
-
-    public boolean reservarAsiento(int fila, int columna, Espectador espectador) {
-        if (fila >= 0 && fila < butacas.length && columna >= 0 && columna < butacas[fila].length) {
-            if (butacas[fila][columna] == null) {
-                butacas[fila][columna] = espectador;
-                return true;
-            }
-        }
-        return false;
+    public Sala(int numero, String tituloPelicula, Espectador[][] butacas) {
+        this.numero = numero;
+        this.tituloPelicula = tituloPelicula;
+        this.butacas = butacas;
     }
 
     public int getNumero() {
         return numero;
     }
 
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
     public String getTituloPelicula() {
         return tituloPelicula;
     }
 
+    public void setTituloPelicula(String tituloPelicula) {
+        this.tituloPelicula = tituloPelicula;
+    }
+
     public Espectador[][] getButacas() {
         return butacas;
+    }
+
+    public void setButacas(Espectador[][] butacas) {
+        this.butacas = butacas;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Sala ");
+        sb.append("").append(numero);
+        sb.append(", tituloPelicula=").append(tituloPelicula);
+        sb.append("");
+        return sb.toString();
     }
 }
