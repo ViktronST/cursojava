@@ -1,6 +1,7 @@
 package es.cursojava.POO.herencia;
 
 public class Animal {
+    //Atributos
     private String nombre;
     private double peso;
     
@@ -8,6 +9,10 @@ public class Animal {
     public Animal(String nombre, double peso) {
         this.nombre = nombre;
         this.peso = peso;
+    }
+
+    public Animal(String nombre) {
+        this.nombre = nombre;
     }
 
     //Getters y Setters
@@ -27,6 +32,7 @@ public class Animal {
         this.peso = peso;
     }
     
+    //Métodos
     public void comer(){
         System.out.println("El animal " + this.nombre + " está comiendo.");
     }
