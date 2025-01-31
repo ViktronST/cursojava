@@ -1,4 +1,4 @@
-package es.cursojava.POO.sastreria;
+package es.cursojava.POO.herencia.sastreria;
 
 public class Tienda {
     

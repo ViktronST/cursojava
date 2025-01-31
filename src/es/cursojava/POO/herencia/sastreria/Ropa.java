@@ -1,21 +1,12 @@
-package es.cursojava.POO.sastreria;
+package es.cursojava.POO.herencia.sastreria;
 
-public class Camisa {
-    //Creamos la clase camisa con los atributos color, precio, talla y botón.
+public class Ropa {
     private String color;
     private double precio;
     private String talla;
-    private Boton[] botones;
-
-    //Constructor con parámetros
-    public Camisa(String color, double precio, String talla, Boton[] botones) {
-        this.color = color;
-        this.precio = precio;
-        this.talla = talla;
-        this.botones = botones;
-    }
-
-    public Camisa(String color, double precio, String talla) {
+    
+    //Constructor
+    public Ropa(String color, double precio, String talla) {
         this.color = color;
         this.precio = precio;
         this.talla = talla;
@@ -46,12 +37,5 @@ public class Camisa {
         this.talla = talla;
     }
 
-    public Boton[] getBoton() {
-        return botones;
-    }
-
-    public void setBoton(Boton[] botones) {
-        this.botones = botones;
-    }
     
 }

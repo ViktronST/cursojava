@@ -1,4 +1,4 @@
-package es.cursojava.POO.sastreria;
+package es.cursojava.POO.herencia.sastreria;
 
 public class Maniqui {
     //Creamos la clase maniquí con los atributos id (identificador), pantalón, camisa y vestido.
