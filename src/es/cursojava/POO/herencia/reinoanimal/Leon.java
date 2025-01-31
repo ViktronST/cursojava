@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia;
+package es.cursojava.POO.herencia.reinoanimal;
 
 public class Leon extends Animal{
     //Atributos
@@ -19,4 +19,13 @@ public class Leon extends Animal{
     public void cazar(){
         System.out.println("El león " + getNombre() + " está cazando.");
     }
+
+    //Lammamos al método del Padre y lo ampliamos
+    @Override
+    public void comer() {
+        super.comer();
+        System.out.println(" Ferozmente.");
+    }
+
+    
 }

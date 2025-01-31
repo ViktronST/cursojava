@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia;
+package es.cursojava.POO.herencia.reinoanimal;
 
 public class Vaca extends Animal{
     //Atributos
@@ -20,8 +20,8 @@ public class Vaca extends Animal{
         System.out.println("La vaca " + getNombre() + " está mugiendo.");
     }
 
-    //Sobreescribimos el método del padre
-    //Para saber si lo estamos sobreescribiendo de manera correcta
+    //Llamamos al método del padre y lo sobreescribimos.
+    //Para saber si lo estamos cambiando de manera correcta
     //pondremos "@Override" y este se asegura de que lo estamos sobreescribiendo.
     @Override
     public void comer(){

@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia;
+package es.cursojava.POO.herencia.reinoanimal;
 
 public class Animal {
     //Atributos
