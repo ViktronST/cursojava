@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.automocion;
+package es.cursojava.POO.herencia.concesionario;
 
 public class Coche extends Vehiculo{
     private int numPuertas;

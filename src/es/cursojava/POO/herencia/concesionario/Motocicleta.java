@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.automocion;
+package es.cursojava.POO.herencia.concesionario;
 
 public class Motocicleta extends Vehiculo{
     private boolean tieneSidecar;
@@ -16,7 +16,7 @@ public class Motocicleta extends Vehiculo{
     @Override
     public void mostrarInformacion() {
         super.mostrarInformacion();
-        System.out.println("Cilindrada: " + cilindrada);
+        System.out.println("Cilindrada: " + cilindrada + " cc.");
         System.out.println("Sidecar: " + tieneSidecar);
     }
 

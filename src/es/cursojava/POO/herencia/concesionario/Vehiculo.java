@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.automocion;
+package es.cursojava.POO.herencia.concesionario;
 
 public class Vehiculo {
     private String marca;
@@ -18,11 +18,11 @@ public class Vehiculo {
 
     //Método
     public void mostrarInformacion(){
-        System.out.println("- Mostrando información del vehículo -");
+        System.out.println("\n- Mostrando información del vehículo -");
         System.out.println("Marca: " + marca);
         System.out.println("Modelo: " + modelo);
         System.out.println("Año: " + anio);
-        System.out.println("Velocidad Máxima: " + velocidadMaxima);
+        System.out.println("Velocidad Máxima: " + velocidadMaxima + " KM.");
         System.out.println("Tipo: " + tipo);
     }
 
