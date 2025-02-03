@@ -38,4 +38,13 @@ public class Boton {
         this.forma = forma;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Color = ").append(color);
+        sb.append("| Tamaño = ").append(tamanio);
+        sb.append("| Forma = " ).append(forma);
+        return sb.toString();
+    }
+
 }

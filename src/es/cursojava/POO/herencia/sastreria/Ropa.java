@@ -37,5 +37,13 @@ public class Ropa {
         this.talla = talla;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Color = ").append(color);
+        sb.append("| Precio = ").append(precio);
+        sb.append("| Talla = " ).append(talla);
+        return sb.toString();
+    }
     
 }

@@ -38,7 +38,7 @@ public class Maniqui {
         return id;
     }
 
-    // public void setId(int id) {          //Para no cambiar el id
+    // public void setId(int id) {     //Para no cambiar el id
     //     this.id = id;
     // }
 

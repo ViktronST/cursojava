@@ -18,5 +18,15 @@ public class Pantalon extends Ropa{
         this.boton = boton;
     }
 
+    @Override
+    public String toString() {
+        String padre = super.toString();
+        StringBuilder sb = new StringBuilder();
+        sb.append("Pantalón = { ");
+        sb.append(padre);
+        sb.append("| Boton = ").append(boton);
+        sb.append(" }");
+        return sb.toString();
+    }
     
 }

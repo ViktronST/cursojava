@@ -52,7 +52,7 @@ public class Tienda {
             
             //Datos del pantalón
             Pantalon pantalon = maniqui.getPantalon();
-            if(pantalon!=null){                                 //A través del control de los null, nos mostrará solo lo que lleve puesto el maniqui.
+            if(pantalon!=null){                              //A través del control de los null, nos mostrará solo lo que lleve puesto el maniqui.
                 System.out.println("- Pantalón:");
                 System.out.println("\t Color: " + pantalon.getColor());
                 System.out.println("\t Talla: " + pantalon.getTalla());

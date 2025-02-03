@@ -1,5 +1,7 @@
 package es.cursojava.POO.herencia.sastreria;
 
+import java.util.Arrays;
+
 public class Camisa extends Ropa{
     private Boton[] botones;
 
@@ -20,6 +22,17 @@ public class Camisa extends Ropa{
 
     public void setBoton(Boton[] botones) {
         this.botones = botones;
+    }
+
+    @Override
+    public String toString() {
+        String padre = super.toString();
+        StringBuilder sb = new StringBuilder();
+        sb.append("Camisa = { ");
+        sb.append(padre);
+        sb.append("| Botones = ").append(Arrays.toString(botones));
+        sb.append(" }");
+        return sb.toString();
     }
     
 }
