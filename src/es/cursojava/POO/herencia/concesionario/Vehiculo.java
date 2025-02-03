@@ -30,28 +30,29 @@ public class Vehiculo {
         System.out.println("Tipo: " + tipo);
     }
 
-    public int calcularImpuesto() {
-        anio = 2025;
-        int sumar = 0;
-        int impuesto5 = (5/100) * 200;
-        int impuesto10 = (10/100) * 200;
+    // public int calcularImpuesto() {
+    //     anio = 2025;
+    //     int sumar = 0;
+    //     int impuesto5 = (5/100) * 200;
+    //     int impuesto10 = (10/100) * 200;
+    //     int impuestoTotal;
         
-        if(anio < anio-10) {
-            sumar = impuesto5 + 200;
-        }else {
-            sumar = impuesto10 + 200;
-        }
+    //     if(anio < anio-10) {
+    //         sumar = impuesto5 + 200;
+    //     }else {
+    //         sumar = impuesto10 + 200;
+    //     }
 
-        if(tipo == "Gasolina" || tipo == "Diesel") {
-            sumar = impuesto10 + 200;
-        }else if(tipo == "Hibrido") {
-            sumar = impuesto10 - 200;
-        }else{
-            sumar = impuesto5 - 200;
-        }
+    //     if(tipo == "Gasolina" || tipo == "Diesel") {
+    //         sumar = impuesto10 + 200;
+    //     }else if(tipo == "Hibrido") {
+    //         sumar = impuesto10 - 200;
+    //     }else{
+    //         sumar = impuesto5 - 200;
+    //     }
 
-        if()
-    }
+    //     if()
+    // }
 
     //Getters y Setters
     public String getMarca() {

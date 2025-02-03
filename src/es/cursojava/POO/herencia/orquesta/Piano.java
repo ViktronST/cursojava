@@ -5,8 +5,8 @@ public class Piano extends Instrumento{
     private String tipoPiano;
     
     //Constructor
-    public Piano(String nombre, String tipo, boolean afinado, int numeroOctavas, String tipoPiano) {
-        super(nombre, tipo, afinado);
+    public Piano(String nombre, String tipo, int numeroOctavas, String tipoPiano) {
+        super(nombre, tipo);
         this.numeroOctavas = numeroOctavas;
         this.tipoPiano = tipoPiano;
     }
@@ -15,7 +15,7 @@ public class Piano extends Instrumento{
     public void afinar() {
         super.afinar();
         System.out.println(" Afinando Piano.");
-        System.out.println("====================");
+        System.out.println("========================================");
     }
 
     //Getters y Setters
@@ -34,6 +34,19 @@ public class Piano extends Instrumento{
     public void setTipoPiano(String tipoPiano) {
         this.tipoPiano = tipoPiano;
     }
+
+    @Override
+    public String toString() {
+        String padre = super.toString();
+        StringBuilder sb = new StringBuilder();
+        sb.append("Piano { ");
+        sb.append(padre);
+        sb.append(", Número de Octavas: ").append(numeroOctavas);
+        sb.append(", Tipo de Piano: ").append(tipoPiano);
+        sb.append(" }");
+        return sb.toString();
+    }
+
 
     
 }

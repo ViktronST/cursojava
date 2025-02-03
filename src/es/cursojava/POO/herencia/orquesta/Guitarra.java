@@ -4,8 +4,13 @@ public class Guitarra extends Instrumento{
     private int numCuerdas;
 
     //Constructor
-    public Guitarra(String nombre, String tipo, boolean afinado, int numCuerdas) {
-        super(nombre, tipo, afinado);
+    public Guitarra(String nombre, String tipo) {
+        super(nombre, tipo);
+        this.numCuerdas = 6;
+    }
+
+    public Guitarra(int numCuerdas, String nombre, String tipo) {
+        super(nombre, tipo);
         this.numCuerdas = numCuerdas;
     }
 
@@ -14,7 +19,7 @@ public class Guitarra extends Instrumento{
     public void afinar() {
         super.afinar();
         System.out.println(" Afinando Guitarra.");
-        System.out.println("====================");
+        System.out.println("========================================");
     }
 
     //Getters y Setters
@@ -26,5 +31,15 @@ public class Guitarra extends Instrumento{
         this.numCuerdas = numCuerdas;
     }
 
-    
+    @Override
+    public String toString() {
+        String padre = super.toString();
+        StringBuilder sb = new StringBuilder();
+        sb.append("Guittarra { ");
+        sb.append(padre);
+        sb.append(", Número de Cuerdas: ").append(numCuerdas);
+        sb.append(" }");
+        return sb.toString();
+    }
+
 }

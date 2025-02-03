@@ -4,15 +4,22 @@ public class GuitarraElectrica extends Guitarra{
     private double potencia;
 
     //Constructor
-    public GuitarraElectrica(String nombre, String tipo, boolean afinado, int numCuerdas, double potencia) {
-        super(nombre, tipo, afinado, numCuerdas);
-        this.potencia = potencia;
-    }
+    public GuitarraElectrica(String nombre, String tipo, double potencia) {
+		super(nombre, tipo);
+		this.potencia = potencia;
+	}
+
+	public GuitarraElectrica(String nombre, String tipo) {
+		super(nombre, tipo);
+	}
+
+	public GuitarraElectrica(int numCuerdas, String nombre, String tipo) {
+		super(numCuerdas, nombre, tipo);
+	}
 
     //Método
-    public void tocando(){
-        System.out.println("Tocando muy alto.");
-        System.out.println("====================");
+    public void tocar(){
+        System.out.println("Tocando la guitarra eléctrica " + getNombre() + " muy alto.");
     }
 
     //Getters y Setters
@@ -24,5 +31,15 @@ public class GuitarraElectrica extends Guitarra{
         this.potencia = potencia;
     }
 
+    @Override
+    public String toString() {
+        String padre = super.toString();
+        StringBuilder sb = new StringBuilder();
+        sb.append("Guittarra Electrica [ ");
+        sb.append(padre);
+        sb.append(", Potencia: ").append(potencia);
+        sb.append(" ]");
+        return sb.toString();
+    }
     
 }

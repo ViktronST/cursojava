@@ -6,26 +6,32 @@ public class Instrumento {
     private boolean afinado;
     
     //Constructor
-    public Instrumento(String nombre, String tipo, boolean afinado) {
+    public Instrumento(String nombre, String tipo) {
         this.nombre = nombre;
         this.tipo = tipo;
-        this.afinado = afinado;
     }
 
     //Métodos
     public void afinar(){
-        System.out.println("Afinando instrumento " + getNombre());
+        System.out.println("Afinando instrumento " + nombre);
         if(Math.random() < 0.4){
-            System.out.println("El isntrumento " + getNombre() + " se está afinando.");
-            afinado = false;
+            System.out.println("El isntrumento " + nombre + " no se pudo afinar correctamente.");
+            this.afinado = false;
         }else{
-            System.out.println("El isntrumento " + getNombre() + " está afinando correctamente.");
-            afinado = true;
+            System.out.println("El isntrumento " + nombre + " está afinando correctamente.");
+            this.afinado = true;
         }
+
+        // this.afinado = Math.random() > 0.4;
+        // if(afinado){
+        //     System.out.println("El isntrumento " + nombre + " no se pudo afinar correctamente.");
+        // }else{
+        //     System.out.println("El isntrumento " + nombre + " está afinando correctamente.");
+        // }
     }
 
     public void tocar(){
-        System.out.println("Tocando instrumento " + getNombre());
+        System.out.println("Tocando instrumento " + nombre);
     }
 
     //Getters y Setters
@@ -45,7 +51,7 @@ public class Instrumento {
         this.tipo = tipo;
     }
 
-    public boolean getAfinado() {
+    public boolean isAfinado() {
         return afinado;
     }
 
@@ -53,5 +59,13 @@ public class Instrumento {
         this.afinado = afinado;
     }
 
-    
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Nombre: ").append(nombre);
+        sb.append(", Tipo: ").append(tipo);
+        sb.append(", Afinado: " ).append(afinado);
+        return sb.toString();
+    }
+
 }
