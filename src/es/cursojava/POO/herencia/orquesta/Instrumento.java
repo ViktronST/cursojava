@@ -13,7 +13,7 @@ public class Instrumento {
     }
 
     //Métodos
-    public void Afinar(){
+    public void afinar(){
         System.out.println("Afinando instrumento " + getNombre());
         if(Math.random() < 0.4){
             System.out.println("El isntrumento " + getNombre() + " se está afinando.");
@@ -24,7 +24,7 @@ public class Instrumento {
         }
     }
 
-    public void Tocar(){
+    public void tocar(){
         System.out.println("Tocando instrumento " + getNombre());
     }
 
@@ -45,7 +45,7 @@ public class Instrumento {
         this.tipo = tipo;
     }
 
-    public boolean isAfinado() {
+    public boolean getAfinado() {
         return afinado;
     }
 

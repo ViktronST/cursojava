@@ -20,13 +20,13 @@ public class BandaMusica {
     private void afinarInstrumentos(Instrumento[] instrumentos) {
         System.out.println("= = = Afinando los instrumentos = = =");
         for (Instrumento instrumento : instrumentos) {
-            instrumento.Afinar();
+            instrumento.afinar();
         }
     }
 
     private void tocarInstrumentos(Instrumento[] instrumentos) {
         for (Instrumento instrumento : instrumentos) {
-            instrumento.Tocar();
+            instrumento.tocar();
         }
     }
 }

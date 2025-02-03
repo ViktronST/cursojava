@@ -20,6 +20,10 @@ public class Coche extends Vehiculo{
         System.out.println("Aire Acondicionado: " + tieneAireAcondicionado);
     }
 
+    public void llamarCoche() {
+        System.out.println();
+    }
+
     //Getters y Setters
     public int getNumPuertas() {
         return numPuertas;

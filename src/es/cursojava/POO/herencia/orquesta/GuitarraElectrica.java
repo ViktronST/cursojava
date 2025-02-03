@@ -10,7 +10,7 @@ public class GuitarraElectrica extends Guitarra{
     }
 
     //Método
-    public void Tocando(){
+    public void tocando(){
         System.out.println("Tocando muy alto.");
         System.out.println("====================");
     }

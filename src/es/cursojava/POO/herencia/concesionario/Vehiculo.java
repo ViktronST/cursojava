@@ -5,7 +5,7 @@ public class Vehiculo {
     private String modelo;
     private int anio;
     private double velocidadMaxima;
-    private String tipo;    //Gasolina, Diesel o Hibrido.
+    private String tipo;    //Gasolina, Diesel, Hibrido o Electrico.
     
     //Constructor
     public Vehiculo(String marca, String modelo, int anio, double velocidadMaxima, String tipo) {
@@ -16,14 +16,41 @@ public class Vehiculo {
         this.tipo = tipo;
     }
 
-    //Método
-    public void mostrarInformacion(){
+    //Métodos
+    public void llamarHijas() {
+
+    }
+    
+    public void mostrarInformacion() {
         System.out.println("\n- Mostrando información del vehículo -");
         System.out.println("Marca: " + marca);
         System.out.println("Modelo: " + modelo);
         System.out.println("Año: " + anio);
         System.out.println("Velocidad Máxima: " + velocidadMaxima + " KM.");
         System.out.println("Tipo: " + tipo);
+    }
+
+    public int calcularImpuesto() {
+        anio = 2025;
+        int sumar = 0;
+        int impuesto5 = (5/100) * 200;
+        int impuesto10 = (10/100) * 200;
+        
+        if(anio < anio-10) {
+            sumar = impuesto5 + 200;
+        }else {
+            sumar = impuesto10 + 200;
+        }
+
+        if(tipo == "Gasolina" || tipo == "Diesel") {
+            sumar = impuesto10 + 200;
+        }else if(tipo == "Hibrido") {
+            sumar = impuesto10 - 200;
+        }else{
+            sumar = impuesto5 - 200;
+        }
+
+        if()
     }
 
     //Getters y Setters

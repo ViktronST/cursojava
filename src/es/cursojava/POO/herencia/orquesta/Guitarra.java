@@ -11,8 +11,8 @@ public class Guitarra extends Instrumento{
 
     //Método
     @Override
-    public void Afinar() {
-        super.Afinar();
+    public void afinar() {
+        super.afinar();
         System.out.println(" Afinando Guitarra.");
         System.out.println("====================");
     }

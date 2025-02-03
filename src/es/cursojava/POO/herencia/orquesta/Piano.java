@@ -12,8 +12,8 @@ public class Piano extends Instrumento{
     }
 
     @Override
-    public void Afinar() {
-        super.Afinar();
+    public void afinar() {
+        super.afinar();
         System.out.println(" Afinando Piano.");
         System.out.println("====================");
     }

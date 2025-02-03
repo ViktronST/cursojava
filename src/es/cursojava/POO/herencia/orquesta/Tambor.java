@@ -10,12 +10,12 @@ public class Tambor extends Instrumento{
     }
 
     @Override
-    public void Afinar() {
+    public void afinar() {
         System.out.println(" Tambor Afinado."); //SIEMPRE AFINADO
         System.out.println("====================");
     }
 
-    public void Aporrear() {
+    public void aporrear() {
         System.out.println(" Aporreando Tambor.");
     }
 
