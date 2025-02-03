@@ -1,6 +1,9 @@
 package es.cursojava.POO.herencia.concesionario;
 
+import java.time.LocalDate;
+
 public class Vehiculo {
+    private String categoria;   //Coche, Motocicleta o Camión
     private String marca;
     private String modelo;
     private int anio;
@@ -8,7 +11,8 @@ public class Vehiculo {
     private String tipo;    //Gasolina, Diesel, Hibrido o Electrico.
     
     //Constructor
-    public Vehiculo(String marca, String modelo, int anio, double velocidadMaxima, String tipo) {
+    public Vehiculo(String categoria, String marca, String modelo, int anio, double velocidadMaxima, String tipo) {
+        this.categoria = categoria;
         this.marca = marca;
         this.modelo = modelo;
         this.anio = anio;
@@ -17,12 +21,9 @@ public class Vehiculo {
     }
 
     //Métodos
-    public void llamarHijas() {
-
-    }
-    
     public void mostrarInformacion() {
         System.out.println("\n- Mostrando información del vehículo -");
+        System.out.println("Categoría: " + categoria);
         System.out.println("Marca: " + marca);
         System.out.println("Modelo: " + modelo);
         System.out.println("Año: " + anio);
@@ -30,29 +31,51 @@ public class Vehiculo {
         System.out.println("Tipo: " + tipo);
     }
 
-    // public int calcularImpuesto() {
-    //     anio = 2025;
-    //     int sumar = 0;
-    //     int impuesto5 = (5/100) * 200;
-    //     int impuesto10 = (10/100) * 200;
-    //     int impuestoTotal;
-        
-    //     if(anio < anio-10) {
-    //         sumar = impuesto5 + 200;
-    //     }else {
-    //         sumar = impuesto10 + 200;
-    //     }
+    public int calcularImpuesto() {
+        int anioActual = LocalDate.now().getYear();
+        int antiguedad = anioActual - anio;
+        int impuestoBase = 200;
+        int impuestoTotal;
 
-    //     if(tipo == "Gasolina" || tipo == "Diesel") {
-    //         sumar = impuesto10 + 200;
-    //     }else if(tipo == "Hibrido") {
-    //         sumar = impuesto10 - 200;
-    //     }else{
-    //         sumar = impuesto5 - 200;
-    //     }
+        //Cálculo del impuesto base según la antigüedad
+        if (antiguedad > 10) {
+            impuestoTotal = impuestoBase + (int) (0.05 * impuestoBase); //5% más
+        } else {
+            impuestoTotal = impuestoBase + (int) (0.10 * impuestoBase); //10% más
+        }
 
-    //     if()
-    // }
+        //Cálculo del impuesto base según el tipo de combustible
+        if (tipo.equals("Gasolina") || tipo.equals("Diesel")) {
+            impuestoTotal += 0.10 * impuestoBase; //10% más
+        } else if (tipo.equals("Eléctrico")) {
+            impuestoTotal -= 0.10 * impuestoBase; //10% menos
+        } else if (tipo.equals("Híbrido")) {
+            impuestoTotal -= 0.05 * impuestoBase; //5% menos
+        }
+
+        //Cálculo del impuesto base según la categoría de vehículo
+        if (categoria.equalsIgnoreCase("Camión")) {
+            impuestoTotal += (int) (0.10 * impuestoTotal); //+10% más
+        } else if (categoria.equalsIgnoreCase("Coche")) {
+            impuestoTotal += (int) (0.05 * impuestoTotal); //+5% más
+        } else if (categoria.equalsIgnoreCase("Motocicleta")) {
+            impuestoTotal -= (int) (0.05 * impuestoTotal); //-5% menos
+        }
+
+        return impuestoTotal;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Categoría: ").append(categoria);
+        sb.append(", Marca: ").append(marca);
+        sb.append(", Modelo: ").append(modelo);
+        sb.append(", Año: ").append(anio);
+        sb.append(", Velocidad Máxima: ").append(velocidadMaxima).append(" Km.");
+        sb.append(", Tipo: ").append(tipo);
+        return sb.toString();
+    }
 
     //Getters y Setters
     public String getMarca() {

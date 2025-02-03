@@ -5,9 +5,9 @@ public class Motocicleta extends Vehiculo{
     private int cilindrada;
     
     //Constructor
-    public Motocicleta(String marca, String modelo, int anio, double velocidadMaxima, String tipo, boolean tieneSidecar,
+    public Motocicleta(String categoria, String marca, String modelo, int anio, double velocidadMaxima, String tipo, boolean tieneSidecar,
             int cilindrada) {
-        super(marca, modelo, anio, velocidadMaxima, tipo);
+        super(categoria, marca, modelo, anio, velocidadMaxima, tipo);
         this.tieneSidecar = tieneSidecar;
         this.cilindrada = cilindrada;
     }
@@ -18,6 +18,18 @@ public class Motocicleta extends Vehiculo{
         super.mostrarInformacion();
         System.out.println("Cilindrada: " + cilindrada + " cc.");
         System.out.println("Sidecar: " + tieneSidecar);
+    }
+
+    @Override
+    public String toString() {
+        String padre = super.toString();
+        StringBuilder sb = new StringBuilder();
+        sb.append("Motocicleta { ");
+        sb.append(padre);
+        sb.append(", Cilindrada: ").append(cilindrada).append(" cc.");
+        sb.append(", Tiene Sidecar: ").append(tieneSidecar);
+        sb.append(" }");
+        return sb.toString();
     }
 
     //Getters y Setters

@@ -5,9 +5,9 @@ public class Camion extends Vehiculo{
     private int numeroEjes;
     
     //Constructor
-    public Camion(String marca, String modelo, int anio, double velocidadMaxima, String tipo, double capacidadCarga,
+    public Camion(String categoria, String marca, String modelo, int anio, double velocidadMaxima, String tipo, double capacidadCarga,
             int numeroEjes) {
-        super(marca, modelo, anio, velocidadMaxima, tipo);
+        super(categoria, marca, modelo, anio, velocidadMaxima, tipo);
         this.capacidadCarga = capacidadCarga;
         this.numeroEjes = numeroEjes;
     }
@@ -18,6 +18,19 @@ public class Camion extends Vehiculo{
         super.mostrarInformacion();
         System.out.println("Número de Ejes: " + numeroEjes);
         System.out.println("Capacidad de Carga: " + capacidadCarga + " Toneladas.");
+    }
+
+    @Override
+    public String toString() {
+        String padre = super.toString();
+        StringBuilder sb = new StringBuilder();
+        sb.append("Camión { ");
+        sb.append(padre);
+        sb.append(", Número de Ejes: ").append(numeroEjes);
+        sb.append(", Capacidad de Carga: ").append(capacidadCarga).append("Toneladas");
+        sb.append(" }");
+        return sb.toString();
+        //return "Camion [capacidadCarga=" + capacidadCarga + ", numeroEjes=" + numeroEjes + "]";
     }
 
     //Getters y Setters
