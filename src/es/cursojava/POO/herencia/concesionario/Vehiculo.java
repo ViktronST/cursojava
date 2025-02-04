@@ -48,28 +48,30 @@ public class Vehiculo {
         int impuestoTotal;
 
         //Cálculo del impuesto según la antigüedad.
-        if (antiguedad > 10) {
-            impuestoTotal = impuestoBase + ((5 / 100) * impuestoBase); //5% más
+        if (antiguedad > 10 && antiguedad < 20) {
+            impuestoTotal = impuestoBase + (int) (0.05 * impuestoBase); //5% más
+        } else if (antiguedad > 20) {
+            impuestoTotal = impuestoBase + (int) (0.10 * impuestoBase); //10% más
         } else {
-            impuestoTotal = impuestoBase + ((10 / 100) * impuestoBase); //10% más
+            impuestoTotal = 200;
         }
 
         //Cálculo del impuesto según el tipo de combustible.
-        if (tipo.equals("Gasolina") || tipo.equals("Diesel")) {
+        if (tipo.equalsIgnoreCase("Gasolina") || tipo.equalsIgnoreCase("Diesel")) {
             impuestoTotal += (10 / 100) * impuestoBase; //10% más
-        } else if (tipo.equals("Eléctrico")) {
+        } else if (tipo.equalsIgnoreCase("Eléctrico")) {
             impuestoTotal -= (10 / 100) * impuestoBase; //10% menos
-        } else if (tipo.equals("Híbrido")) {
+        } else if (tipo.equalsIgnoreCase("Híbrido")) {
             impuestoTotal -= (5 / 100) * impuestoBase; //5% menos
         }
 
         //Cálculo del impuesto según la categoría de vehículo.
         if (this instanceof Camion) {
-            impuestoTotal += ((10 / 100) * impuestoTotal); //+10% más
+            impuestoTotal += (int) (0.10 * impuestoTotal); //+10% más
         } else if (this instanceof Coche) {
-            impuestoTotal += ((5 / 100) * impuestoTotal); //+5% más
+            impuestoTotal += (int) (0.05 * impuestoTotal); //+5% más
         } else if (this instanceof Motocicleta) {
-            impuestoTotal -= ((5 / 100) * impuestoTotal); //-5% menos
+            impuestoTotal -= (int) (0.05 * impuestoTotal); //-5% menos
         }
 
         return impuestoTotal;
