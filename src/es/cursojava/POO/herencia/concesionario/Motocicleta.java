@@ -28,9 +28,10 @@ public class Motocicleta extends Vehiculo{
         StringBuilder sb = new StringBuilder();
         sb.append("\nMotocicleta { ");
         sb.append(padre);
-        sb.append(" | CILINDRADA: ").append(cilindrada).append(" cc.");
-        sb.append(" | TIENE SIDECAR: ").append(tieneSidecar);
-        sb.append(" }");
+        //sb.append(super.toString());
+        sb.append("\n\tCILINDRADA: ").append(cilindrada).append(" cc.");
+        sb.append("\n\tTIENE SIDECAR: ").append(tieneSidecar?"Sí":"No"); //De normal devuelve true o false, de esta manera 
+        sb.append("\n\t}");                                                //nos aseguramos de que nos conteste.
         return sb.toString();
     }
 

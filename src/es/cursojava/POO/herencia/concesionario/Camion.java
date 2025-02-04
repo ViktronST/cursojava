@@ -28,9 +28,10 @@ public class Camion extends Vehiculo{
         StringBuilder sb = new StringBuilder();
         sb.append("\nCamión { ");
         sb.append(padre);
-        sb.append(" | NÚMERO DE EJES: ").append(numeroEjes);
-        sb.append(" | CAPACIDAD DE CARGA: ").append(capacidadCarga).append(" Ton.");
-        sb.append(" }");
+        //sb.append(super.toString());
+        sb.append("\n\tNÚMERO DE EJES: ").append(numeroEjes);
+        sb.append("\n\tCAPACIDAD DE CARGA: ").append(capacidadCarga).append(" Ton.");
+        sb.append("\n\t}");
         return sb.toString();
     }
 

@@ -33,11 +33,11 @@ public class Vehiculo {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("MARCA: ").append(marca);
-        sb.append(" | MODELO: ").append(modelo);
-        sb.append(" | AÑO: ").append(anio);
-        sb.append(" | VELOCIDAD MÁXIMA: ").append(velocidadMaxima).append(" Km.");
-        sb.append(" | TIPO: ").append(tipo);
+        sb.append("\n\tMARCA: ").append(marca);
+        sb.append("\n\tMODELO: ").append(modelo);
+        sb.append("\n\tAÑO: ").append(anio);
+        sb.append("\n\tVELOCIDAD MÁXIMA: ").append(velocidadMaxima).append(" Km.");
+        sb.append("\n\tTIPO: ").append(tipo);
         return sb.toString();
     }
 
@@ -45,7 +45,7 @@ public class Vehiculo {
         int anioActual = LocalDate.now().getYear();     //Se obtiene la fecha y el año actual.
         int antiguedad = anioActual - anio;
         int impuestoBase = 200;
-        int impuestoTotal;
+        int impuestoTotal;      //Esta es una variable local, no puede inicializar sin un valor determinado.
 
         //Cálculo del impuesto según la antigüedad.
         if (antiguedad > 10 && antiguedad < 20) {
@@ -53,7 +53,7 @@ public class Vehiculo {
         } else if (antiguedad > 20) {
             impuestoTotal = impuestoBase + (int) (0.10 * impuestoBase); //10% más
         } else {
-            impuestoTotal = 200;
+            impuestoTotal = impuestoBase;
         }
 
         //Cálculo del impuesto según el tipo de combustible.

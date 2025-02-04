@@ -14,7 +14,7 @@ public class Coche extends Vehiculo{
 
     //Método
     @Override
-    public void mostrarInformacion() {
+    public void mostrarInformacion() {  //Con los toString() ya creados, TODOS los métodos mostrarInfo en las clases SOBRAN!
         //super.mostrarInformacion();
         System.out.println(toString());
         // System.out.println("Número de Puertas: " + numPuertas);
@@ -28,9 +28,10 @@ public class Coche extends Vehiculo{
         StringBuilder sb = new StringBuilder();
         sb.append("\nCoche { ");
         sb.append(padre);
-        sb.append(" | NÚMERO DE PUERTAS: ").append(numPuertas);
-        sb.append(" | TIENE AIRE ACONDICIONADO: ").append(tieneAireAcondicionado);
-        sb.append(" }");
+        //sb.append(super.toString());
+        sb.append("\n\tNÚMERO DE PUERTAS: ").append(numPuertas);
+        sb.append("\n\tTIENE AIRE ACONDICIONADO: ").append(tieneAireAcondicionado?"Sí":"No");
+        sb.append("\n\t}");
         return sb.toString();
     }
 
