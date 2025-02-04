@@ -5,9 +5,9 @@ public class Motocicleta extends Vehiculo{
     private int cilindrada;
     
     //Constructor
-    public Motocicleta(String categoria, String marca, String modelo, int anio, double velocidadMaxima, String tipo, boolean tieneSidecar,
+    public Motocicleta(String marca, String modelo, int anio, double velocidadMaxima, String tipo, boolean tieneSidecar,
             int cilindrada) {
-        super(categoria, marca, modelo, anio, velocidadMaxima, tipo);
+        super(marca, modelo, anio, velocidadMaxima, tipo);
         this.tieneSidecar = tieneSidecar;
         this.cilindrada = cilindrada;
     }
@@ -15,9 +15,23 @@ public class Motocicleta extends Vehiculo{
     //Método
     @Override
     public void mostrarInformacion() {
-        super.mostrarInformacion();
-        System.out.println("Cilindrada: " + cilindrada + " cc.");
-        System.out.println("Sidecar: " + tieneSidecar);
+        //super.mostrarInformacion();
+        System.out.println(toString());
+        // System.out.println("Cilindrada: " + cilindrada + " cc.");
+        // System.out.println("Sidecar: " + tieneSidecar);
+    }
+
+    //toString
+    @Override
+    public String toString() {
+        String padre = super.toString();
+        StringBuilder sb = new StringBuilder();
+        sb.append("\nMotocicleta { ");
+        sb.append(padre);
+        sb.append(" | CILINDRADA: ").append(cilindrada).append(" cc.");
+        sb.append(" | TIENE SIDECAR: ").append(tieneSidecar);
+        sb.append(" }");
+        return sb.toString();
     }
 
     //Getters y Setters
@@ -37,16 +51,4 @@ public class Motocicleta extends Vehiculo{
         this.cilindrada = cilindrada;
     }
 
-    //toString
-    @Override
-    public String toString() {
-        String padre = super.toString();
-        StringBuilder sb = new StringBuilder();
-        sb.append("\nMotocicleta { ");
-        sb.append(padre);
-        sb.append(", Cilindrada: ").append(cilindrada).append(" cc.");
-        sb.append(", Tiene Sidecar: ").append(tieneSidecar);
-        sb.append(" }");
-        return sb.toString();
-    }
 }

@@ -5,9 +5,9 @@ public class Coche extends Vehiculo{
     private boolean tieneAireAcondicionado;
     
     //Constructor
-    public Coche(String categoria, String marca, String modelo, int anio, double velocidadMaxima, String tipo, int numPuertas,
+    public Coche(String marca, String modelo, int anio, double velocidadMaxima, String tipo, int numPuertas,
             boolean tieneAireAcondicionado) {
-        super(categoria, marca, modelo, anio, velocidadMaxima, tipo);
+        super(marca, modelo, anio, velocidadMaxima, tipo);
         this.numPuertas = numPuertas;
         this.tieneAireAcondicionado = tieneAireAcondicionado;
     }
@@ -15,13 +15,23 @@ public class Coche extends Vehiculo{
     //Método
     @Override
     public void mostrarInformacion() {
-        super.mostrarInformacion();
-        System.out.println("Número de Puertas: " + numPuertas);
-        System.out.println("Aire Acondicionado: " + tieneAireAcondicionado);
+        //super.mostrarInformacion();
+        System.out.println(toString());
+        // System.out.println("Número de Puertas: " + numPuertas);
+        // System.out.println("Aire Acondicionado: " + tieneAireAcondicionado);
     }
 
-    public void llamarCoche() {
-        System.out.println();
+    //toString
+    @Override
+    public String toString() {
+        String padre = super.toString();
+        StringBuilder sb = new StringBuilder();
+        sb.append("\nCoche { ");
+        sb.append(padre);
+        sb.append(" | NÚMERO DE PUERTAS: ").append(numPuertas);
+        sb.append(" | TIENE AIRE ACONDICIONADO: ").append(tieneAireAcondicionado);
+        sb.append(" }");
+        return sb.toString();
     }
 
     //Getters y Setters
@@ -39,19 +49,6 @@ public class Coche extends Vehiculo{
 
     public void setTieneAireAcondicionado(boolean tieneAireAcondicionado) {
         this.tieneAireAcondicionado = tieneAireAcondicionado;
-    }
-
-    //toString
-    @Override
-    public String toString() {
-        String padre = super.toString();
-        StringBuilder sb = new StringBuilder();
-        sb.append("\nCoche { ");
-        sb.append(padre);
-        sb.append(", Número de Puertas: ").append(numPuertas);
-        sb.append(", Tiene Aire Acondicionado: ").append(tieneAireAcondicionado);
-        sb.append(" }");
-        return sb.toString();
     }
     
 }

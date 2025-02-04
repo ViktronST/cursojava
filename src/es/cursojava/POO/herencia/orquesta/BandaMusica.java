@@ -41,7 +41,7 @@ public class BandaMusica {
         System.out.println("\n- - - - Empiezan a tocar - - - -");
         for (Instrumento instrumento : instrumentos) {            
             if(instrumento instanceof Tambor) {             //instrumento.getClass().getName().equals("Tambor")
-                Tambor tambor = (Tambor)instrumento;        //.contains("Tambor"), tambien nos serviría.
+                Tambor tambor = (Tambor)instrumento;        //instrumento.getClass().getName().contains("Tambor"), tambien nos serviría.
                 tambor.aporrear();
             }else {
                 instrumento.tocar();
