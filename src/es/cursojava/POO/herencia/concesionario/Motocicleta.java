@@ -20,18 +20,6 @@ public class Motocicleta extends Vehiculo{
         System.out.println("Sidecar: " + tieneSidecar);
     }
 
-    @Override
-    public String toString() {
-        String padre = super.toString();
-        StringBuilder sb = new StringBuilder();
-        sb.append("Motocicleta { ");
-        sb.append(padre);
-        sb.append(", Cilindrada: ").append(cilindrada).append(" cc.");
-        sb.append(", Tiene Sidecar: ").append(tieneSidecar);
-        sb.append(" }");
-        return sb.toString();
-    }
-
     //Getters y Setters
     public boolean isTieneSidecar() {
         return tieneSidecar;
@@ -49,5 +37,16 @@ public class Motocicleta extends Vehiculo{
         this.cilindrada = cilindrada;
     }
 
-    
+    //toString
+    @Override
+    public String toString() {
+        String padre = super.toString();
+        StringBuilder sb = new StringBuilder();
+        sb.append("\nMotocicleta { ");
+        sb.append(padre);
+        sb.append(", Cilindrada: ").append(cilindrada).append(" cc.");
+        sb.append(", Tiene Sidecar: ").append(tieneSidecar);
+        sb.append(" }");
+        return sb.toString();
+    }
 }

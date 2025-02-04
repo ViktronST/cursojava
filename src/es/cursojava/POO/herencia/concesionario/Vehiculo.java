@@ -3,7 +3,7 @@ package es.cursojava.POO.herencia.concesionario;
 import java.time.LocalDate;
 
 public class Vehiculo {
-    private String categoria;   //Coche, Motocicleta o Camión
+    private String categoria;   //Coche, Motocicleta o Camión.
     private String marca;
     private String modelo;
     private int anio;
@@ -37,14 +37,14 @@ public class Vehiculo {
         int impuestoBase = 200;
         int impuestoTotal;
 
-        //Cálculo del impuesto base según la antigüedad
+        //Cálculo del impuesto base según la antigüedad.
         if (antiguedad > 10) {
             impuestoTotal = impuestoBase + (int) (0.05 * impuestoBase); //5% más
         } else {
             impuestoTotal = impuestoBase + (int) (0.10 * impuestoBase); //10% más
         }
 
-        //Cálculo del impuesto base según el tipo de combustible
+        //Cálculo del impuesto base según el tipo de combustible.
         if (tipo.equals("Gasolina") || tipo.equals("Diesel")) {
             impuestoTotal += 0.10 * impuestoBase; //10% más
         } else if (tipo.equals("Eléctrico")) {
@@ -53,7 +53,7 @@ public class Vehiculo {
             impuestoTotal -= 0.05 * impuestoBase; //5% menos
         }
 
-        //Cálculo del impuesto base según la categoría de vehículo
+        //Cálculo del impuesto base según la categoría de vehículo.
         if (categoria.equalsIgnoreCase("Camión")) {
             impuestoTotal += (int) (0.10 * impuestoTotal); //+10% más
         } else if (categoria.equalsIgnoreCase("Coche")) {

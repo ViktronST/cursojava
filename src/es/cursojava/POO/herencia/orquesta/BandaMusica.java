@@ -46,7 +46,6 @@ public class BandaMusica {
             }else {
                 instrumento.tocar();
             }
-        
         }
         System.out.println(" __________________________");
         System.out.println("| El concierto a terminado |");

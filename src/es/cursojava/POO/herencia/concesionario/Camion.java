@@ -20,19 +20,6 @@ public class Camion extends Vehiculo{
         System.out.println("Capacidad de Carga: " + capacidadCarga + " Toneladas.");
     }
 
-    @Override
-    public String toString() {
-        String padre = super.toString();
-        StringBuilder sb = new StringBuilder();
-        sb.append("Camión { ");
-        sb.append(padre);
-        sb.append(", Número de Ejes: ").append(numeroEjes);
-        sb.append(", Capacidad de Carga: ").append(capacidadCarga).append("Toneladas");
-        sb.append(" }");
-        return sb.toString();
-        //return "Camion [capacidadCarga=" + capacidadCarga + ", numeroEjes=" + numeroEjes + "]";
-    }
-
     //Getters y Setters
     public double getCapacidadCarga() {
         return capacidadCarga;
@@ -50,5 +37,17 @@ public class Camion extends Vehiculo{
         this.numeroEjes = numeroEjes;
     }
 
-    
+    //toString
+    @Override
+    public String toString() {
+        String padre = super.toString();
+        StringBuilder sb = new StringBuilder();
+        sb.append("\nCamión { ");
+        sb.append(padre);
+        sb.append(", Número de Ejes: ").append(numeroEjes);
+        sb.append(", Capacidad de Carga: ").append(capacidadCarga).append("Toneladas");
+        sb.append(" }");
+        return sb.toString();
+    }
+
 }

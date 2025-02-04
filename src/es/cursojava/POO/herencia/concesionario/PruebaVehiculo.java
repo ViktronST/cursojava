@@ -7,6 +7,12 @@ public class PruebaVehiculo {
     }
 
     private void infoVehiculo() {
+        Vehiculo[] vehiculos = crearVehiculos();
+        mostrarInfoVehiculo(vehiculos);
+    }
+
+    private Vehiculo[] crearVehiculos() {
+        System.out.println("Creando vehículos.");
         Vehiculo coche1 = new Coche("Coche", "Mercedes", "Berlina", 2022, 215, "Eléctrico", 5, true);
         Vehiculo coche2 = new Coche("Coche", "BMW", "M3 E30", 1990, 235, "Gasolina", 3, false);
         Vehiculo motocicleta1 = new Motocicleta("Motocicleta", "Kawasaki", "Z900", 2024, 260, "Gasolina", false, 948);
@@ -15,7 +21,8 @@ public class PruebaVehiculo {
         Vehiculo camion2 = new Camion("Camión", "Iveco", "X-Way", 2010, 200, "Diesel", 30, 3);
 
         Vehiculo[] vehiculos = {coche1, coche2, motocicleta1, motocicleta2, camion1, camion2};
-        mostrarInfoVehiculo(vehiculos);
+        System.out.println("Vehículos creados. Total: " + vehiculos.length);
+        return vehiculos;
     }
 
     private void mostrarInfoVehiculo(Vehiculo[] vehiculos) {

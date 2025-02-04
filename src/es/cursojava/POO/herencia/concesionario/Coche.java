@@ -20,18 +20,6 @@ public class Coche extends Vehiculo{
         System.out.println("Aire Acondicionado: " + tieneAireAcondicionado);
     }
 
-    @Override
-    public String toString() {
-        String padre = super.toString();
-        StringBuilder sb = new StringBuilder();
-        sb.append("Coche { ");
-        sb.append(padre);
-        sb.append(", Número de Puertas: ").append(numPuertas);
-        sb.append(", Tiene Aire Acondicionado: ").append(tieneAireAcondicionado);
-        sb.append(" }");
-        return sb.toString();
-    }
-
     public void llamarCoche() {
         System.out.println();
     }
@@ -53,5 +41,17 @@ public class Coche extends Vehiculo{
         this.tieneAireAcondicionado = tieneAireAcondicionado;
     }
 
+    //toString
+    @Override
+    public String toString() {
+        String padre = super.toString();
+        StringBuilder sb = new StringBuilder();
+        sb.append("\nCoche { ");
+        sb.append(padre);
+        sb.append(", Número de Puertas: ").append(numPuertas);
+        sb.append(", Tiene Aire Acondicionado: ").append(tieneAireAcondicionado);
+        sb.append(" }");
+        return sb.toString();
+    }
     
 }
