@@ -77,6 +77,8 @@ public class Vehiculo {
         return impuestoTotal;
     }
 
+    //public abstract int acelerar();
+
     //Getters y Setters
     public String getMarca() {
         return marca;
