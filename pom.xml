@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Versión de Maven -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Información básica del proyecto -->
+    <groupId>es.cursojava.viktor</groupId>  <!-- Nombre del grupo o paquete -->
+    <artifactId>CursoJava</artifactId>  <!-- Nombre del proyecto -->
+    <version>1.0.0</version>  <!-- Versión del proyecto -->
+    <packaging>jar</packaging>  <!-- Tipo de empaquetado (jar o war) -->
+
+    <name>Mi Proyecto Maven</name>
+    <description>Un proyecto de ejemplo con Maven en VS Code</description>
+
+    <!-- Repositorios de Maven Central -->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
+
+    <!-- Configuración de compilación -->
+    <build>
+        <plugins>
+            <!-- Plugin de compilación de Java -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>11</source>  <!-- Versión mínima de Java -->
+                    <target>11</target>
+                </configuration>
+            </plugin>
+
+            <!-- Plugin para empaquetar la aplicación en un JAR ejecutable -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.ejemplo.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <!-- Dependencias -->
+    <dependencies>
+        <!-- Dependencia para Java 8 o superior -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+
+        <!-- Dependencia para pruebas con JUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+
+	    <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+    	<dependency>
+        	<groupId>org.apache.logging.log4j</groupId>
+        	<artifactId>log4j-core</artifactId>
+        	<version>2.24.3</version>
+   	    </dependency>
+    </dependencies>
+</project>

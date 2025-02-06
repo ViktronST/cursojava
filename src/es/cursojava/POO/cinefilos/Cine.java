@@ -1,7 +1,5 @@
 package es.cursojava.POO.cinefilos;
 
-import java.util.Scanner;
-
 public class Cine {
     private String nombre;
     private Sala[] salas;
