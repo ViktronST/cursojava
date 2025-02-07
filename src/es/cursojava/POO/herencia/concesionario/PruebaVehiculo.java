@@ -4,6 +4,8 @@ public class PruebaVehiculo {
     public static void main(String[] args) {
         PruebaVehiculo probar = new PruebaVehiculo();
         probar.infoVehiculo();
+        Garaje garaje = new Garaje("Mammago", 2, 1, 1);
+        probar.aparcarVehiculos(probar.crearVehiculos(), garaje);
     }
 
     private void infoVehiculo() {
@@ -33,6 +35,18 @@ public class PruebaVehiculo {
             System.out.println("Impuesto a pagar: " + vehiculo.calcularImpuesto() + " Euros.");
             System.out.println("-------------------------------------------");
         }
+    }
+
+    private void aparcarVehiculos (Vehiculo[] vehiculos, Garaje garaje) {
+        for (Vehiculo vehiculo : vehiculos) {
+            if (garaje.hayHueco(vehiculo)) {
+                System.out.println("Hay plazas para el vehículo " + vehiculo);
+                garaje.aparcarVehiculo(vehiculo);
+            }else {
+                System.out.println("No hay plazas disponibles para este vheículo " + vehiculo);
+            }
+        }
+        
     }
     
 }
