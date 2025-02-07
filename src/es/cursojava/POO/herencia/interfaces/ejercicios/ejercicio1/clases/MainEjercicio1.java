@@ -28,6 +28,16 @@ public class MainEjercicio1 {
         return vehiculos;
     }
 
+    private Encendible[] encendibles(Productos[] productos, Vehiculos[] vehiculos) {
+        Encendible[] encendibles = {cafetera, coche};
+        return encendibles;
+    }
+
+    private Apagable[] apagables(Productos[] productos, Vehiculos[] vehiculos) {
+        Apagable[] apagables = {cafetera, coche};
+        return apagables;
+    }
+
     private void mostrarInfo(Productos[] productos, Vehiculos[] vehiculos) {
         for (Vehiculos v : vehiculos) {
             v.mostrarInformacion();
@@ -42,7 +52,7 @@ public class MainEjercicio1 {
 
     //Método para mostrar los Productos y Vehículos Encendibles y Apagables.
     //Todo en uno.
-    private void estado(Productos[] productos, Vehiculos[] vehiculos) {
+    private void estado() {
         
     }
 }
