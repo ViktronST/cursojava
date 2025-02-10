@@ -28,15 +28,15 @@ public class MainEjercicio1 {
         return vehiculos;
     }
 
-    private Encendible[] encendibles(Productos[] productos, Vehiculos[] vehiculos) {
-        Encendible[] encendibles = {cafetera, coche};
-        return encendibles;
-    }
+    // private Encendible[] encendibles(Productos[] productos, Vehiculos[] vehiculos) {
+    //     Encendible[] encendibles = {cafetera, coche};
+    //     return encendibles;
+    // }
 
-    private Apagable[] apagables(Productos[] productos, Vehiculos[] vehiculos) {
-        Apagable[] apagables = {cafetera, coche};
-        return apagables;
-    }
+    // private Apagable[] apagables(Productos[] productos, Vehiculos[] vehiculos) {
+    //     Apagable[] apagables = {cafetera, coche};
+    //     return apagables;
+    // }
 
     private void mostrarInfo(Productos[] productos, Vehiculos[] vehiculos) {
         for (Vehiculos v : vehiculos) {
