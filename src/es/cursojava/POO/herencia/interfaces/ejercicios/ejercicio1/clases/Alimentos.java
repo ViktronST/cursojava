@@ -1,11 +1,12 @@
 package es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.clases;
 
+import es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.interfaces.NoUpdatable;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public abstract class Alimentos extends Productos{
+public abstract class Alimentos extends Productos implements NoUpdatable{
     private String fechaCaducidad;
 
     //Constructor
@@ -20,6 +21,7 @@ public abstract class Alimentos extends Productos{
         System.out.println(toString());
     }
 
+    //toString
     @Override
     public String toString() {
         String padre = super.toString();

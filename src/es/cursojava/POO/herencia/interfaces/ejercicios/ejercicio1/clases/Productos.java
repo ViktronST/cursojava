@@ -20,6 +20,7 @@ public abstract class Productos {
         System.out.println(toString());
     }
 
+    //toString
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

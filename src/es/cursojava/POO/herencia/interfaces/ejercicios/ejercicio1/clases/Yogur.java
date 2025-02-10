@@ -20,6 +20,31 @@ public class Yogur extends Alimentos{
         System.out.println(toString());
     }
 
+    //Interfaces
+    @Override
+    public void NoUpdate() {
+        System.out.println("Este Yogur "+ getNombre() + " puede ser: ");
+        System.out.println("Consultado");
+        System.out.println("Insertado");
+        System.out.println("Deleteado");
+    }
+
+    @Override
+    public void select() {  //Consultar debe de estar en la clase Producto.
+        System.out.println("Consultando Yogur" + getNombre());
+    }
+
+    @Override
+    public void insert() { 
+        System.out.println("Insertando Yogur" + getNombre());
+    }
+
+    @Override
+    public void delete() {   
+        System.out.println("Deleteando Yogur" + getNombre());
+    }
+
+    //toString
     @Override
     public String toString() {
         String padre = super.toString();

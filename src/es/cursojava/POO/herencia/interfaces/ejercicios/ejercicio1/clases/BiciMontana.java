@@ -21,6 +21,31 @@ public class BiciMontana extends Bicicleta{
         System.out.println(toString());
     }
 
+    //Interfaces
+    @Override
+    public void NoUpdate() { 
+        System.out.println("Esta Bici de Montaña "+ getMarca() + " puede ser: ");
+        System.out.println("Consultada");
+        System.out.println("Insertada");
+        System.out.println("Deleteada");
+    }
+
+    @Override
+    public void select() {  //Consultar debe de estar en la clase Vehículo.
+        System.out.println("Consultando Bici de Montaña " + getMarca());
+    }
+
+    @Override
+    public void insert() { 
+        System.out.println("Insertando Bici de Montaña " + getMarca());
+    }
+
+    @Override
+    public void delete() {   
+        System.out.println("Deleteando Bici de Montaña " + getMarca());
+    }
+
+    //toString
     @Override
     public String toString() {
         String padre = super.toString();

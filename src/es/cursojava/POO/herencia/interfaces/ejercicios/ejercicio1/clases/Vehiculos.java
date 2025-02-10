@@ -1,5 +1,10 @@
 package es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.clases;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Vehiculos {
     private String marca;
     private String modelo;
@@ -28,6 +33,7 @@ public class Vehiculos {
         // System.out.println("Tipo: " + tipo);
     }
 
+    //toString
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -39,44 +45,4 @@ public class Vehiculos {
         return sb.toString();
     }
 
-    //Getters y Setters
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public int getAnio() {
-        return anio;
-    }
-
-    public void setAnio(int anio) {
-        this.anio = anio;
-    }
-
-    public double getVelocidadMaxima() {
-        return velocidadMaxima;
-    }
-
-    public void setVelocidadMaxima(double velocidadMaxima) {
-        this.velocidadMaxima = velocidadMaxima;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
 }

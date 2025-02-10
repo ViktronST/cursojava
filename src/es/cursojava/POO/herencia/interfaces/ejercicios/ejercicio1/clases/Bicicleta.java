@@ -1,11 +1,12 @@
 package es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.clases;
 
+import es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.interfaces.NoUpdatable;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public abstract class Bicicleta extends Vehiculos{
+public abstract class Bicicleta extends Vehiculos implements NoUpdatable{
     private int numMarchas;
     
     public Bicicleta(String marca, String modelo, int anio, double velocidadMaxima, String tipo, int numMarchas) {
@@ -19,6 +20,7 @@ public abstract class Bicicleta extends Vehiculos{
         System.out.println(toString());
     }
 
+    //toString
     @Override
     public String toString() {
         String padre = super.toString();

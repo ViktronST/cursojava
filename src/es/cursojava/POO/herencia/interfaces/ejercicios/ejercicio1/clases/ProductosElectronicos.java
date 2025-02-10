@@ -1,19 +1,30 @@
 package es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.clases;
 
-import es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.interfaces.Apagable;
-import es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.interfaces.Encendible;
+import es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.interfaces.Operable;
+import es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.interfaces.SiUpdatable;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public abstract class ProductosElectronicos extends Productos implements Encendible, Apagable{
+public abstract class ProductosElectronicos extends Productos implements Operable, SiUpdatable{
     private String fechaFabricacion;
 
     //Constructor
     public ProductosElectronicos(String nombre, double precio, String fechaFabricacion) {
         super(nombre, precio);
         this.fechaFabricacion = fechaFabricacion;
+    }
+
+    //Método
+    @Override
+    public void mostrarInformacion() {
+        System.out.println(toString());
+    }
+
+    //Interfaces
+    @Override
+    public void operable() {
     }
 
     @Override
@@ -26,12 +37,7 @@ public abstract class ProductosElectronicos extends Productos implements Encendi
         System.out.println("El Producto Electrónico está APAGADO.");
     }
 
-    //Método
-    @Override
-    public void mostrarInformacion() {
-        System.out.println(toString());
-    }
-
+    //toString
     @Override
     public String toString() {
         String padre = super.toString();

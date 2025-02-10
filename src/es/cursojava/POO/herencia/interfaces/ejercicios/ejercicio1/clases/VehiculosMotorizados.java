@@ -1,13 +1,13 @@
 package es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.clases;
 
-import es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.interfaces.Apagable;
-import es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.interfaces.Encendible;
+import es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.interfaces.Operable;
+import es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.interfaces.SiUpdatable;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public abstract class VehiculosMotorizados extends Vehiculos implements Encendible, Apagable{
+public abstract class VehiculosMotorizados extends Vehiculos implements Operable, SiUpdatable{
     private String motor;
 
     //Constructor
@@ -22,6 +22,11 @@ public abstract class VehiculosMotorizados extends Vehiculos implements Encendib
         System.out.println(toString());
     }
 
+    //Interfaces
+    @Override
+    public void operable() {
+    }
+
     @Override
     public void encender() {
         System.out.println("El Vehículo Motorizado está ENCENDIDO.");
@@ -32,6 +37,7 @@ public abstract class VehiculosMotorizados extends Vehiculos implements Encendib
         System.out.println("El Vehículo Motorizado está APAGADO.");
     }
 
+    //toString
     @Override
     public String toString() {
         String padre = super.toString();

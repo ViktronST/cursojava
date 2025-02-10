@@ -21,6 +21,37 @@ public class Coche extends VehiculosMotorizados{
         System.out.println(toString());
     }
     
+    //Interfaces
+    @Override
+    public void SiUpdate() {  
+        System.out.println("Este Coche "+ getMarca() + " puede ser: ");
+        System.out.println("Consultado");
+        System.out.println("Insertado");
+        System.out.println("Updateado");
+        System.out.println("Deleteado");
+    }
+
+    @Override
+    public void select() {  //Consultar debe de estar en la clase Vehículo.
+        System.out.println("Consultando Coche " + getMarca());
+    }
+
+    @Override
+    public void insert() { 
+        System.out.println("Insertando Coche " + getMarca());
+    }
+
+    @Override
+    public void update() {
+        System.out.println("Updateando Coche " + getMarca());
+    }
+
+    @Override
+    public void delete() {   
+        System.out.println("Deleteando Coche " + getMarca());
+    }
+
+    //toString
     @Override
     public String toString() {
         String padre = super.toString();
