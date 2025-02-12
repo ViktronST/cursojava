@@ -1,6 +1,14 @@
-package es.cursojava.POO.herencia.interfaces;
+package es.cursojava.POO.herencia.interfaces.ejercicios.ejemplos.clases;
 
-public class ClaseInterfaz implements Interfaz1, Interfaz2{
+import es.cursojava.POO.herencia.interfaces.ejercicios.ejemplos.interfaces.Interfaz3;
+
+public class ClaseInterfaz2 implements Interfaz3{
+
+    @Override
+    public void metodo4() {
+        // TODO Auto-generated method stub
+        
+    }
 
     @Override
     public void metodo1() {

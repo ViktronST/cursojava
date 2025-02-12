@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.interfaces;
+package es.cursojava.POO.herencia.interfaces.ejercicios.ejemplos.interfaces;
 
 public interface Interfaz1 {
 
