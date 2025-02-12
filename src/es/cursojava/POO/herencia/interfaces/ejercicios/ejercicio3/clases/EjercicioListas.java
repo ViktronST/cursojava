@@ -36,7 +36,7 @@ public class EjercicioListas {
 
         for (int i = 0; i < vehiculos.size(); i++) {
             Vehiculo vm = vehiculos.get(i);   //Devuelve el objeto que se encuentra en dicha posición.
-            vm.encender();
+            //vm.encender();
         }
     }
 }
