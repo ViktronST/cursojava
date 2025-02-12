@@ -1,6 +1,7 @@
 package es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio3.clases;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class EjercicioListas {
@@ -12,6 +13,7 @@ public class EjercicioListas {
         Camion camion1 = new Camion("Volvo", "FH", 2023, 300, "Eléctrico", 65, 5);
         Camion camion2 = new Camion("Iveco", "X-Way", 2010, 200, "Diesel", 30, 3);
 
+        //Una manera de hacerlo.
         List<Vehiculo> vehiculos = new ArrayList<>();
         System.out.println(vehiculos.size());
         System.out.println(vehiculos.isEmpty());
@@ -22,5 +24,19 @@ public class EjercicioListas {
         vehiculos.add(camion1);
         vehiculos.add(camion2);
 
+        //Otra manera.
+        vehiculos.addAll(vehiculos = Arrays.asList(coche1, coche2, motocicleta1, motocicleta2, camion1, camion2));
+        //vehiculos = Arrays.asList(coche1, coche2, motocicleta1, motocicleta2, camion1, camion2);
+        System.out.println(vehiculos.size());
+
+        //Recorremos las posiciones de las listas y ponemos los vehiculos a acelerar.
+        // for (Vehiculo vehiculo : vehiculos) {
+        //     vehiculo.acelerar();
+        // }
+
+        for (int i = 0; i < vehiculos.size(); i++) {
+            Vehiculo vm = vehiculos.get(i);   //Devuelve el objeto que se encuentra en dicha posición.
+            vm.encender();
+        }
     }
 }
