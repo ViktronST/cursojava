@@ -1,4 +1,4 @@
-package es.cursojava.POO;
+package es.cursojava.POO.centroeducativo;
 
 //POJO 
 public class Alumno {
@@ -48,6 +48,12 @@ public class Alumno {
         } else {
             System.out.println("Nota Media incorrecta.");
         }
+    }
+
+    //toString
+    @Override
+    public String toString() {
+        return "Alumno [ Nombre: " + nombre + ", Apellido: " + apellido + ", Edad: " + edad + ", Nota Media: " + notaMedia + ", Email: " + email + "]";
     }
 
     //Getters y Setters de nombre

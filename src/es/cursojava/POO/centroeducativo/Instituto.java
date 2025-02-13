@@ -1,4 +1,4 @@
-package es.cursojava.POO;
+package es.cursojava.POO.centroeducativo;
 
 public class Instituto {
     public static void main(String[] args) {

@@ -3,9 +3,10 @@ package es.cursojava.inicio.colecciones.sets;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import java.util.Iterator;
 
-import es.cursojava.POO.Alumno;
+import es.cursojava.POO.centroeducativo.Alumno;
+
+import java.util.Iterator;
 
 public class PruebasSets {
     public static void main(String[] args) {
