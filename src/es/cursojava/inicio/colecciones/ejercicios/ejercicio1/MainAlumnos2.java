@@ -1,13 +1,13 @@
 package es.cursojava.inicio.colecciones.ejercicios.ejercicio1;
 
-import es.cursojava.POO.centroeducativo.Alumno;
-import es.cursojava.inicio.funciones.Utilidades;
-
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 //import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+
+import es.cursojava.POO.centroeducativo.Alumno;
+import es.cursojava.inicio.funciones.Utilidades;
 
 public class MainAlumnos2 {
     public static void main(String[] args) {
@@ -36,7 +36,7 @@ public class MainAlumnos2 {
         Alumno alumno2 = new Alumno("N2", "A2", 19, 5, "asdas2@gmail.com");
         Alumno alumno3 = new Alumno("N1", "A3", 20, 4, "asdas3@gmail.com");
         Alumno alumno4 = new Alumno("N2", "A4", 21, 10, "asdas4@gmail.com");
-        Alumno alumno5 = new Alumno("N5", "A5", 22, 7, "asdas5@gmail.com");
+        Alumno alumno5 = new Alumno("N3", "A5", 22, 7, "asdas5@gmail.com");
         Alumno alumno6 = new Alumno("N1", "A6", 23, 3.5, "asdas6@gmail.com");
 
         List<Alumno> alumnos = new ArrayList<>();
@@ -58,6 +58,12 @@ public class MainAlumnos2 {
         //Otra manera de crear las listas.
         //List<Alumno> listaAlumnos = Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6);
 
+        //Aquí se añaden los alumnos a la lista.
+        //alumnos.addAll(Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6));
+        
+        //Aquí se crea la lista y se añaden los alumnos. APUNTAMOS A UNA NUEVA LISTA CREADA!!!
+        //alumnos = (Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6));
+
         return alumnos;
     }
 
@@ -78,11 +84,33 @@ public class MainAlumnos2 {
                 System.out.println("\nNombre: " + alumno.getNombre() + " - Nota Media: " + alumno.getNotaMedia());
                 encontrado = true;
             }
+            //System.out.println(alumno.getNombre().equalsIgnoreCase(nombre)? "Nombre: " + alumno.getNombre() + " - Nota Media: " + alumno.getNotaMedia() : "");
         }
 
         if (!encontrado) {
             System.out.println("\nNo hay alumnos con el nombre '" + nombre + "'.");
         }
+        //System.out.println(!encontrado? "\nNo hay alumnos con el nombre '" + nombre + "'." : "");
+    }
+
+    private Map<String, List<Alumno>> distribuirAlumnosEnAulas1(List<Alumno> alumnos) {
+        Map<String, List<Alumno>> aulas = new LinkedHashMap<>();
+        aulas.put("Aula 1", alumnos.subList(0, 2));
+        aulas.put("Aula 2", alumnos.subList(2, 4));
+        aulas.put("Aula 3", alumnos.subList(4, 6));
+
+        // DISTRIBUIR EN ORDEN SECUENCIAL
+        for (int i = 0; i < alumnos.size(); i++) {
+            if (i < 2) {
+                aulas.get("Aula 1").add(alumnos.get(i));
+            } else if (i < 4) {
+                aulas.get("Aula 2").add(alumnos.get(i)); 
+            } else {
+                aulas.get("Aula 3").add(alumnos.get(i)); 
+            }
+        }
+
+        return aulas;
     }
 
     private Map<String, List<Alumno>> distribuirAlumnosEnAulas(List<Alumno> alumnos) {
@@ -245,12 +273,27 @@ public class MainAlumnos2 {
     // }
 
     private void eliminarAlumnosSuspensos(List<Alumno> alumnos) {
+        // DE ESTA MANERA FALLA PORQUE SE ESTÁ RECORRIENDO LA LISTA MIENTRAS SE ELIMINAN LOS OBJETOS.
+        // for (Alumno alumno : alumnos) {
+        //     if (alumno.getNotaMedia() < 5) {
+        //         alumnos.remove(alumno);
+        //     }
+        // }
+
         for (int i = 0; i < alumnos.size(); i++) {
             if (alumnos.get(i).getNotaMedia() < 5) {
                 alumnos.remove(i);
                 i--;
             }
         }
+
+        // OTRA FORMA DE HACERLO.
+        // for (int i = 0; i < alumnos.size(); i++) {
+        //     Alumno alumno = alumnos.get(i);
+        //     if (alumnos.getNotaMedia() < 5) {
+        //         alumnos.remove(i--);
+        //     }
+        // }
 
         System.out.println("\n================ Alumnos Aprobados ================");
         for (Alumno alumno : alumnos) {
