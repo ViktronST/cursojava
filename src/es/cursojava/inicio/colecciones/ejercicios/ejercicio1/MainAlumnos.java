@@ -87,19 +87,8 @@ public class MainAlumnos {
         Set<String> aulas = curso.keySet();
         for (String aula : aulas) {
             System.out.println(aula + "\n" + curso.get(aula) + "\n");
-            
-            if() {
-                
-            }
         }
     }
 
-    // private void notaMasAlta(Map<String,List<Alumno>> curso) {
-        
-    //     for (String clave : curso) {
-    //         System.out.println(clave + " " + mapa.get(clave));
-    //     }
-
-    // }
-
+    
 }
