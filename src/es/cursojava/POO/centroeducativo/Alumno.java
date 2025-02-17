@@ -53,7 +53,8 @@ public class Alumno {
     //toString
     @Override
     public String toString() {
-        return "Alumno [ Nombre: " + nombre + ", Apellido: " + apellido + ", Edad: " + edad + ", Nota Media: " + notaMedia + ", Email: " + email + "]";
+        return "Alumno [Nombre: " + nombre + " | Apellido: " + apellido + " | Edad: " + edad + " | Nota Media: " + notaMedia 
+            + " | Email: " + email + "]";
     }
 
     //Getters y Setters de nombre
