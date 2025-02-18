@@ -3,7 +3,7 @@ package es.cursojava.inicio.colecciones.ejercicios.ejercicio1;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashMap;
-//import java.util.Arrays;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -15,27 +15,27 @@ import es.cursojava.inicio.funciones.Utilidades;
 public class MainAlumnos2 {
     public static void main(String[] args) {
         MainAlumnos2 probar = new MainAlumnos2();
-        probar.mostrarInfoAlumnos(probar.obtenerAlumnos());
-        probar.mostrarNotasPorNombre(probar.obtenerAlumnos());
+        probar.mostrarInfoAlumnos(obtenerAlumnos());
+        probar.mostrarNotasPorNombre(obtenerAlumnos());
 
-        // Obtener los alumnos
-        List<Alumno> alumnos = probar.obtenerAlumnos();
+        // Obtener los alumnos.
+        List<Alumno> alumnos = obtenerAlumnos();
 
-        // Distribuir alumnos en aulas
+        // Distribuir alumnos en aulas.
         Map<String, List<Alumno>> aulas = probar.distribuirAlumnosEnAulas(alumnos);
 
-        // Mostrar información de cada aula y sus alumnos
+        // Mostrar información de cada aula y sus alumnos.
         probar.mostrarAulas(aulas);
 
-        // Encontrar al mejor alumno entre todas las aulas
+        // Encontrar al mejor alumno entre todas las aulas.
         probar.encontrarMejorAlumno(aulas);
 
-        // Eliminar alumnos suspensos
+        // Eliminar alumnos suspensos.
         probar.eliminarAlumnosSuspensos(alumnos);
     }
 
-    //============================ CREACIÓN DE ALUMNOS ============================
-    private List<Alumno> obtenerAlumnos() {
+    //======================================== CREACIÓN DE ALUMNOS ========================================
+    static List<Alumno> obtenerAlumnos() {
         Alumno alumno1 = new Alumno("N1", "A1", 18, 4.9, "asdas1@gmail.com");
         Alumno alumno2 = new Alumno("N2", "A2", 19, 5, "asdas2@gmail.com");
         Alumno alumno3 = new Alumno("N1", "A3", 20, 4, "asdas3@gmail.com");
@@ -51,7 +51,7 @@ public class MainAlumnos2 {
         alumnos.add(alumno5);
         alumnos.add(alumno6);
        
-        //Otras manera de crear las listas.
+        // Otras manera de crear las listas.
         // alumnos.add(new Alumno("N1", "A1", 18, 4.9, "asdas1@gmail.com"));
         // alumnos.add(new Alumno("N2", "A2", 19, 5, "asdas2@gmail.com"));
         // alumnos.add(new Alumno("N3", "A3", 20, 4, "asdas3@gmail.com"));
@@ -59,19 +59,19 @@ public class MainAlumnos2 {
         // alumnos.add(new Alumno("N5", "A5", 22, 7, "asdas5@gmail.com"));
         // alumnos.add(new Alumno("N6", "A6", 23, 3.5, "asdas6@gmail.com"));
         
-        //Otra manera de crear las listas.
-        //List<Alumno> listaAlumnos = Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6);
+        // Otra manera de crear las listas.
+        // List<Alumno> listaAlumnos = Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6);
 
-        //Aquí se añaden los alumnos a la lista.
-        //alumnos.addAll(Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6));
+        // Aquí se añaden los alumnos a la lista.
+        // alumnos.addAll(Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6));
         
-        //Aquí se crea la lista y se añaden los alumnos. APUNTAMOS A UNA NUEVA LISTA CREADA!!!
-        //alumnos = (Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6));
+        // Aquí se crea la lista y se añaden los alumnos. APUNTAMOS A UNA NUEVA LISTA CREADA!!!
+        // alumnos = (Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6));
 
         return alumnos;
     }
 
-    //============================ MOSTRAR INFO ALUMNOS ============================
+    //======================================== MOSTRAR INFO ALUMNOS ========================================
     private void mostrarInfoAlumnos(List<Alumno> alumnos) {
         System.out.println("================  Listado de Alunmos ================");
         for (Alumno alumno : alumnos) {
@@ -79,7 +79,7 @@ public class MainAlumnos2 {
         }
     }
 
-    //============================ MOSTRAR NOTAS POR NOMBRE ============================
+    //======================================== MOSTRAR NOTAS POR NOMBRE ========================================
     private void mostrarNotasPorNombre(List<Alumno> alumnos) {
         System.out.println("\n================  Buscando de Alunmos ================");
         String nombre = Utilidades.pideDatoCadena("Introduce nombre del alumno: ");
@@ -99,7 +99,7 @@ public class MainAlumnos2 {
         //System.out.println(!encontrado? "\nNo hay alumnos con el nombre '" + nombre + "'." : "");
     }
 
-    //============================ DISTRIBUIR ALUMNOS EN AULAS ============================
+    //======================================== DISTRIBUIR ALUMNOS EN AULAS ========================================
     private Map<String, List<Alumno>> distribuirAlumnosEnAulas(List<Alumno> alumnos) {
         Map<String, List<Alumno>> aulas = new LinkedHashMap<>();
         aulas.put("Aula 1", alumnos.subList(0, 2)); // DESDE 0 HASTA 2 (NO INCLUYE 2).
@@ -130,7 +130,7 @@ public class MainAlumnos2 {
         return aulas;
     }
 
-    //============================ MOSTRAR LAS AULAS ============================
+    //======================================== MOSTRAR LAS AULAS ========================================
     // Manera, en este caso errónea, de mostrar aulas.
     private void mostrarAulas0(Map<String, List<Alumno>> aulas) {
         for (String aula : aulas.keySet()) {
@@ -177,7 +177,7 @@ public class MainAlumnos2 {
         }
     }
 
-    //============================ ENCONTRAR MEJOR ALUMNO ============================
+    //======================================== ENCONTRAR MEJOR ALUMNO ========================================
     private void encontrarMejorAlumno(Map<String, List<Alumno>> aulas) {
         Alumno mejorAlumno = null;
         String aulaMejorAlumno = "";
@@ -217,7 +217,7 @@ public class MainAlumnos2 {
         System.out.println("\nEl aula con la mejor nota media es: " + mejorAula + " con una nota de " + mejorNota);
     }
 
-    //============================ ELIMINAR ALUMNOS SUSPENSOS ============================
+    //======================================== ELIMINAR ALUMNOS SUSPENSOS ========================================
     private void eliminarAlumnosSuspensos(List<Alumno> alumnos) {
         // DE ESTA MANERA FALLA PORQUE SE ESTÁ RECORRIENDO LA LISTA MIENTRAS SE ELIMINAN LOS OBJETOS.
         // for (Alumno alumno : alumnos) {
@@ -247,7 +247,7 @@ public class MainAlumnos2 {
         }
     }
 
-    //============================ MÉTODO CON MAP.ENTRY ============================
+    //======================================== MÉTODO CON MAP.ENTRY ========================================
     // Método de mostrar aulas.
     private void mostrarAulas3(Map<String, List<Alumno>> aulas) {
         for (Map.Entry<String, List<Alumno>> entry : aulas.entrySet()) {
@@ -259,16 +259,17 @@ public class MainAlumnos2 {
     }
 
     // Otra manera de mostrar las aulas.
-    // private void mostrarAulas4(Map<String, List<Alumno>> aulas) {
-    //     Set<Entry<String, List<Alumno>>> entrySet = aulas.entrySet();
-    //     for (String aula : aulas) {
-    //         System.out.println("\n" + aulas + ":");
-    //         List<Alumno> alumnos = aulas.get(aula);
-    //         for (Alumno alumno : alumnos) {
-    //             System.out.println("\t" + alumno);
-    //         }
-    //     }
-    // }
+    private void mostrarAulas4(Map<String, List<Alumno>> aulas) {
+        Set<Entry<String, List<Alumno>>> entrySet = aulas.entrySet();
+        for (Entry<String,List<Alumno>> entry : entrySet) {
+            String clave = entry.getKey();
+            System.out.println("\n" + clave + ":");
+            List<Alumno> alumnos = entry.getValue();
+            for (Alumno alumno : alumnos) {
+                System.out.println("\t"+alumno.getNombre() + " " +alumno.getApellido());
+            }
+        }
+    }
 
     // Método de encontrar aula con mejor nota.
     private void encontrarAulaConMejorNota1(Map<String, List<Alumno>> aulas) {
@@ -285,7 +286,7 @@ public class MainAlumnos2 {
         }
     }
 
-    //============================ MÉTODO CON LIST<LIST<ALUMNO>> ============================
+    //======================================== MÉTODO CON LIST<LIST<ALUMNO>> ========================================
     // Separar alumnos en aulas
     private List<List<Alumno>> separarEnAulas(List<Alumno> alumnos) {
         List<List<Alumno>> aulas = new ArrayList<>();
