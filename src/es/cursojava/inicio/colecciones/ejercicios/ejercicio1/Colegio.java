@@ -8,15 +8,9 @@ import lombok.Setter;
 public class Colegio {
     private String nombre;
     private String direccion;
-    
-    public Colegio(String nombre, String direccion) {
-        this.nombre = nombre;
-        this.direccion = direccion;
-    }
+    private Map<String, List<Alumno>> aulas;
 
-    @Override
-    public String toString() {
-        return "Colegio [Nombre: " + nombre + ", Direccion: " + direccion + "]";
-    }
+    //Lista de Colegios, con Mapa de Aulas y Lista de Alumnos...
+    //colegios.get(0).getAulas().get("aula1")get(0).getNombre()  ->  1er Alumno
 
 }

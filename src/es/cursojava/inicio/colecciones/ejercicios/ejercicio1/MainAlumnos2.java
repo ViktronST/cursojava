@@ -1,10 +1,13 @@
 package es.cursojava.inicio.colecciones.ejercicios.ejercicio1;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedHashMap;
 //import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import es.cursojava.POO.centroeducativo.Alumno;
 import es.cursojava.inicio.funciones.Utilidades;
@@ -31,6 +34,7 @@ public class MainAlumnos2 {
         probar.eliminarAlumnosSuspensos(alumnos);
     }
 
+    //============================ CREACIÓN DE ALUMNOS ============================
     private List<Alumno> obtenerAlumnos() {
         Alumno alumno1 = new Alumno("N1", "A1", 18, 4.9, "asdas1@gmail.com");
         Alumno alumno2 = new Alumno("N2", "A2", 19, 5, "asdas2@gmail.com");
@@ -67,6 +71,7 @@ public class MainAlumnos2 {
         return alumnos;
     }
 
+    //============================ MOSTRAR INFO ALUMNOS ============================
     private void mostrarInfoAlumnos(List<Alumno> alumnos) {
         System.out.println("================  Listado de Alunmos ================");
         for (Alumno alumno : alumnos) {
@@ -74,6 +79,7 @@ public class MainAlumnos2 {
         }
     }
 
+    //============================ MOSTRAR NOTAS POR NOMBRE ============================
     private void mostrarNotasPorNombre(List<Alumno> alumnos) {
         System.out.println("\n================  Buscando de Alunmos ================");
         String nombre = Utilidades.pideDatoCadena("Introduce nombre del alumno: ");
@@ -93,27 +99,18 @@ public class MainAlumnos2 {
         //System.out.println(!encontrado? "\nNo hay alumnos con el nombre '" + nombre + "'." : "");
     }
 
-    private Map<String, List<Alumno>> distribuirAlumnosEnAulas1(List<Alumno> alumnos) {
+    //============================ DISTRIBUIR ALUMNOS EN AULAS ============================
+    private Map<String, List<Alumno>> distribuirAlumnosEnAulas(List<Alumno> alumnos) {
         Map<String, List<Alumno>> aulas = new LinkedHashMap<>();
-        aulas.put("Aula 1", alumnos.subList(0, 2));
-        aulas.put("Aula 2", alumnos.subList(2, 4));
-        aulas.put("Aula 3", alumnos.subList(4, 6));
-
-        // DISTRIBUIR EN ORDEN SECUENCIAL
-        for (int i = 0; i < alumnos.size(); i++) {
-            if (i < 2) {
-                aulas.get("Aula 1").add(alumnos.get(i));
-            } else if (i < 4) {
-                aulas.get("Aula 2").add(alumnos.get(i)); 
-            } else {
-                aulas.get("Aula 3").add(alumnos.get(i)); 
-            }
-        }
+        aulas.put("Aula 1", alumnos.subList(0, 2)); // DESDE 0 HASTA 2 (NO INCLUYE 2).
+        aulas.put("Aula 2", alumnos.subList(2, 4)); // DESDE 2 HASTA 4 (NO INCLUYE 4).
+        aulas.put("Aula 3", alumnos.subList(4, 6)); // DESDE 4 HASTA 6 (NO INCLUYE 6).
 
         return aulas;
     }
 
-    private Map<String, List<Alumno>> distribuirAlumnosEnAulas(List<Alumno> alumnos) {
+    // Otra manera de hacer la distribución de alumnos en aulas.
+    private Map<String, List<Alumno>> distribuirAlumnosEnAulas1(List<Alumno> alumnos) {
         Map<String, List<Alumno>> aulas = new LinkedHashMap<>();
         aulas.put("Aula 1", new ArrayList<>());
         aulas.put("Aula 2", new ArrayList<>());
@@ -133,16 +130,19 @@ public class MainAlumnos2 {
         return aulas;
     }
 
-    // private void mostrarAulas(Map<String, List<Alumno>> aulas) {
-    //     for (String aula : aulas.keySet()) {
-    //         System.out.println("\n" + aula + ":");
-    //         List<Alumno> alumnos = aulas.get(aula);
-    //         for (Alumno alumno : alumnos) {
-    //             System.out.println("" + alumno);
-    //         }
-    //     }
-    // }
-
+    //============================ MOSTRAR LAS AULAS ============================
+    // Manera, en este caso errónea, de mostrar aulas.
+    private void mostrarAulas0(Map<String, List<Alumno>> aulas) {
+        for (String aula : aulas.keySet()) {
+            System.out.println("\n" + aula + ":");
+            List<Alumno> alumnos = aulas.get(aula);
+            for (Alumno alumno : alumnos) {
+                System.out.println("" + alumno);
+            }
+        }
+    }
+    
+    // Manera correcta de mostrar aulas.
     private void mostrarAulas(Map<String, List<Alumno>> aulas) {
         System.out.println("\n================ Distribución por Aulas ================");
         for (String aula : aulas.keySet()) {
@@ -153,23 +153,31 @@ public class MainAlumnos2 {
         }
     }
 
-    // private void encontrarAulaConMejorNota(Map<String, List<Alumno>> aulas) {
-    //     String mejorAula = "";
-    //     double mejorNota = 0;
+    // Otra manera de mostrar las aulas.
+    private void mostrarAulas1(Map<String, List<Alumno>> aulas) {
+        System.out.println("\n================ Distribución por Aulas ================");
+        Set<String> aulas1 = aulas.keySet();
+        for (String aula : aulas1) {
+            System.out.println("Aula: " + aula);
+            List<Alumno> alumnos = aulas.get(aula);
+            for ( Alumno alumno : alumnos) {
+                System.out.println("\t" + alumno.getNombre() + " " + alumno.getApellido());
+            }
+        }
+    }
 
-    //     for (String aula : aulas.keySet()) {
-    //         List<Alumno> alumnos = aulas.get(aula);
-    //         for (Alumno alumno : alumnos) {
-    //             if (alumno.getNotaMedia() > mejorNota) {
-    //                 mejorNota = alumno.getNotaMedia();
-    //                 mejorAula = aula;
-    //             }
-    //         }
-    //     }
+    // Otra manera de mostrar las aulas.
+    private void mostrarAulas2(Map<String, List<Alumno>> aulas) {
+        System.out.println("\n================ Distribución por Aulas ================");
+        Collection <List<Alumno>> alumnos = aulas.values();
+        for (List<Alumno> alumnosAula : alumnos) {
+            for (Alumno alumno : alumnosAula) {
+                System.out.println("\t" + alumno.getNombre() + " " + alumno.getApellido());
+            }
+        }
+    }
 
-    //     System.out.println("\nEl aula con la mejor nota media es: " + mejorAula + " con una nota de " + mejorNota);
-    // }
-
+    //============================ ENCONTRAR MEJOR ALUMNO ============================
     private void encontrarMejorAlumno(Map<String, List<Alumno>> aulas) {
         Alumno mejorAlumno = null;
         String aulaMejorAlumno = "";
@@ -191,87 +199,25 @@ public class MainAlumnos2 {
         }
     }
 
-    // MÉTODO CON MAP.ENTRY
-    // private void mostrarAulas(Map<String, List<Alumno>> aulas) {
-    //     for (Map.Entry<String, List<Alumno>> entry : aulas.entrySet()) {
-    //         System.out.println("\n" + entry.getKey() + ":");
-    //         for (Alumno alumno : entry.getValue()) {
-    //             System.out.println("\t" + alumno);
-    //         }
-    //     }
-    // }
+    // Método para encontrar el aula con la mejor notaMedia.
+    private void encontrarAulaConMejorNota(Map<String, List<Alumno>> aulas) {
+        String mejorAula = "";
+        double mejorNota = 0;
 
-    // private void encontrarAulaConMejorNota(Map<String, List<Alumno>> aulas) {
-    //     String mejorAula = "";
-    //     double mejorNota = 0;
+        for (String aula : aulas.keySet()) {
+            List<Alumno> alumnos = aulas.get(aula);
+            for (Alumno alumno : alumnos) {
+                if (alumno.getNotaMedia() > mejorNota) {
+                    mejorNota = alumno.getNotaMedia();
+                    mejorAula = aula;
+                }
+            }
+        }
 
-    //     for (Map.Entry<String, List<Alumno>> entry : aulas.entrySet()) {
-    //         for (Alumno alumno : entry.getValue()) {
-    //             if (alumno.getNotaMedia() > mejorNota) {
-    //                 mejorNota = alumno.getNotaMedia();
-    //                 mejorAula = entry.getKey();
-    //             }
-    //         }
-    //     }
-    // }
+        System.out.println("\nEl aula con la mejor nota media es: " + mejorAula + " con una nota de " + mejorNota);
+    }
 
-    // MÉTODO CON LIST<LIST<ALUMNO>>
-    // private List<List<Alumno>> separarEnAulas(List<Alumno> alumnos) {
-    //     List<List<Alumno>> aulas = new ArrayList<>();
-    //     aulas.add(new ArrayList<>()); // Aula 1
-    //     aulas.add(new ArrayList<>()); // Aula 2
-    //     aulas.add(new ArrayList<>()); // Aula 3
-
-    //     // DISTRIBUIR CÍCLICAMENTE
-    //     // for (int i = 0; i < alumnos.size(); i++) {
-    //     //     aulas.get(i % 3).add(alumnos.get(i)); 
-    //     // }
-
-    //     // DISTRIBUIR EN ORDEN SECUENCIAL
-    //     for (int i = 0; i < alumnos.size(); i++) {
-    //         if (i < 2) {
-    //             aulas.get(0).add(alumnos.get(i)); // Primeros 2 a Aula 1
-    //         } else if (i < 4) {
-    //             aulas.get(1).add(alumnos.get(i)); // Siguientes 2 a Aula 2
-    //         } else {
-    //             aulas.get(2).add(alumnos.get(i)); // Últimos 2 a Aula 3
-    //         }
-    //     }
-
-    //     return aulas;
-    // }
-
-    // private void mostrarAulas(List<List<Alumno>> aulas) {
-    //     System.out.println("\n======== Listado de alumnos por aula ======== ");
-    //     for (int i = 0; i < aulas.size(); i++) {
-    //         System.out.println("\nAula " + (i + 1) + ":");
-    //         for (Alumno alumno : aulas.get(i)) {
-    //             System.out.println("Nombre: " + alumno.getNombre() + " - Nota Media: " + alumno.getNotaMedia());
-    //         }
-    //     }
-    // }
-
-    // private void aulaConMejorAlumno(List<List<Alumno>> aulas) {
-    //     double mejorNota = -1;
-    //     int aulaMejor = -1;
-    //     Alumno mejorAlumno = null;
-
-    //     for (int i = 0; i < aulas.size(); i++) {
-    //         for (Alumno alumno : aulas.get(i)) {
-    //             if (alumno.getNotaMedia() > mejorNota) {
-    //                 mejorNota = alumno.getNotaMedia();
-    //                 aulaMejor = i + 1;
-    //                 mejorAlumno = alumno;
-    //             }
-    //         }
-    //     }
-
-    //     if (mejorAlumno != null) {
-    //         System.out.println("\nEl aula con el alumno de mayor nota media es el Aula " + aulaMejor +
-    //                 " (Alumno: " + mejorAlumno.getNombre() + " - Nota Media: " + mejorNota + ")");
-    //     }
-    // }
-
+    //============================ ELIMINAR ALUMNOS SUSPENSOS ============================
     private void eliminarAlumnosSuspensos(List<Alumno> alumnos) {
         // DE ESTA MANERA FALLA PORQUE SE ESTÁ RECORRIENDO LA LISTA MIENTRAS SE ELIMINAN LOS OBJETOS.
         // for (Alumno alumno : alumnos) {
@@ -300,4 +246,103 @@ public class MainAlumnos2 {
             System.out.println(alumno);
         }
     }
+
+    //============================ MÉTODO CON MAP.ENTRY ============================
+    // Método de mostrar aulas.
+    private void mostrarAulas3(Map<String, List<Alumno>> aulas) {
+        for (Map.Entry<String, List<Alumno>> entry : aulas.entrySet()) {
+            System.out.println("\n" + entry.getKey() + ":");
+            for (Alumno alumno : entry.getValue()) {
+                System.out.println("\t" + alumno);
+            }
+        }
+    }
+
+    // Otra manera de mostrar las aulas.
+    // private void mostrarAulas4(Map<String, List<Alumno>> aulas) {
+    //     Set<Entry<String, List<Alumno>>> entrySet = aulas.entrySet();
+    //     for (String aula : aulas) {
+    //         System.out.println("\n" + aulas + ":");
+    //         List<Alumno> alumnos = aulas.get(aula);
+    //         for (Alumno alumno : alumnos) {
+    //             System.out.println("\t" + alumno);
+    //         }
+    //     }
+    // }
+
+    // Método de encontrar aula con mejor nota.
+    private void encontrarAulaConMejorNota1(Map<String, List<Alumno>> aulas) {
+        String mejorAula = "";
+        double mejorNota = 0;
+
+        for (Map.Entry<String, List<Alumno>> entry : aulas.entrySet()) {
+            for (Alumno alumno : entry.getValue()) {
+                if (alumno.getNotaMedia() > mejorNota) {
+                    mejorNota = alumno.getNotaMedia();
+                    mejorAula = entry.getKey();
+                }
+            }
+        }
+    }
+
+    //============================ MÉTODO CON LIST<LIST<ALUMNO>> ============================
+    // Separar alumnos en aulas
+    private List<List<Alumno>> separarEnAulas(List<Alumno> alumnos) {
+        List<List<Alumno>> aulas = new ArrayList<>();
+        aulas.add(new ArrayList<>()); // Aula 1
+        aulas.add(new ArrayList<>()); // Aula 2
+        aulas.add(new ArrayList<>()); // Aula 3
+
+        // DISTRIBUIR CÍCLICAMENTE
+        // for (int i = 0; i < alumnos.size(); i++) {
+        //     aulas.get(i % 3).add(alumnos.get(i)); 
+        // }
+
+        // DISTRIBUIR EN ORDEN SECUENCIAL
+        for (int i = 0; i < alumnos.size(); i++) {
+            if (i < 2) {
+                aulas.get(0).add(alumnos.get(i)); // Primeros 2 a Aula 1
+            } else if (i < 4) {
+                aulas.get(1).add(alumnos.get(i)); // Siguientes 2 a Aula 2
+            } else {
+                aulas.get(2).add(alumnos.get(i)); // Últimos 2 a Aula 3
+            }
+        }
+
+        return aulas;
+    }
+
+    // Método de mostrar aulas.
+    private void mostrarAulas5(List<List<Alumno>> aulas) {
+        System.out.println("\n======== Listado de alumnos por aula ======== ");
+        for (int i = 0; i < aulas.size(); i++) {
+            System.out.println("\nAula " + (i + 1) + ":");
+            for (Alumno alumno : aulas.get(i)) {
+                System.out.println("Nombre: " + alumno.getNombre() + " - Nota Media: " + alumno.getNotaMedia());
+            }
+        }
+    }
+
+    //Método para buscar el aula del alumno con la mejor notaMedia.
+    private void aulaConMejorAlumno(List<List<Alumno>> aulas) {
+        double mejorNota = -1;
+        int aulaMejor = -1;
+        Alumno mejorAlumno = null;
+
+        for (int i = 0; i < aulas.size(); i++) {
+            for (Alumno alumno : aulas.get(i)) {
+                if (alumno.getNotaMedia() > mejorNota) {
+                    mejorNota = alumno.getNotaMedia();
+                    aulaMejor = i + 1;
+                    mejorAlumno = alumno;
+                }
+            }
+        }
+
+        if (mejorAlumno != null) {
+            System.out.println("\nEl aula con el alumno de mayor nota media es el Aula " + aulaMejor +
+                    " (Alumno: " + mejorAlumno.getNombre() + " - Nota Media: " + mejorNota + ")");
+        }
+    }
+
 }
