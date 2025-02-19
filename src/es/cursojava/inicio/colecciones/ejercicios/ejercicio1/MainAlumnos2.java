@@ -376,4 +376,12 @@ public class MainAlumnos2 {
 
         return colegios;
     }
+
+    //======================================== MOSTRAR INFO COLEGIOS ========================================
+    private void mostrarInfoColegios(List<Colegio> colegios) {
+        System.out.println("================  Listado de Colegios ================");
+        for (Colegio colegio : colegios) {
+            System.out.println(colegio);
+        }
+    }
 }
