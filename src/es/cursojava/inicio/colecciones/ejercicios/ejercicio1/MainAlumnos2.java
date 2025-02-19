@@ -37,41 +37,56 @@ public class MainAlumnos2 {
 
     }
 
-    //======================================== CREACIÓN DE ALUMNOS ========================================
-    static List<Alumno> obtenerAlumnos() {
-        Alumno alumno1 = new Alumno("N1", "A1", 18, 4.9, "asdas1@gmail.com");
-        Alumno alumno2 = new Alumno("N2", "A2", 19, 5, "asdas2@gmail.com");
-        Alumno alumno3 = new Alumno("N1", "A3", 20, 4, "asdas3@gmail.com");
-        Alumno alumno4 = new Alumno("N2", "A4", 21, 10, "asdas4@gmail.com");
-        Alumno alumno5 = new Alumno("N3", "A5", 22, 7, "asdas5@gmail.com");
-        Alumno alumno6 = new Alumno("N1", "A6", 23, 3.5, "asdas6@gmail.com");
-
+    //======================================== CREACIÓN DE ALUMNOS ========================================   
+    // Sobrecargamos el método de generar alumnos, para crear sólo los que necesitemos.
+    static List<Alumno> obtenerAlumnos(int numAlumnos) {
         List<Alumno> alumnos = new ArrayList<>();
-        alumnos.add(alumno1);
-        alumnos.add(alumno2);
-        alumnos.add(alumno3);
-        alumnos.add(alumno4);
-        alumnos.add(alumno5);
-        alumnos.add(alumno6);
-       
-        // Otras manera de crear las listas.
-        // alumnos.add(new Alumno("N1", "A1", 18, 4.9, "asdas1@gmail.com"));
-        // alumnos.add(new Alumno("N2", "A2", 19, 5, "asdas2@gmail.com"));
-        // alumnos.add(new Alumno("N3", "A3", 20, 4, "asdas3@gmail.com"));
-        // alumnos.add(new Alumno("N4", "A4", 21, 10, "asdas4@gmail.com"));
-        // alumnos.add(new Alumno("N5", "A5", 22, 7, "asdas5@gmail.com"));
-        // alumnos.add(new Alumno("N6", "A6", 23, 3.5, "asdas6@gmail.com"));
-        
-        // Otra manera de crear las listas.
-        // List<Alumno> listaAlumnos = Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6);
 
-        // Aquí se añaden los alumnos a la lista.
-        // alumnos.addAll(Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6));
-        
-        // Aquí se crea la lista y se añaden los alumnos. APUNTAMOS A UNA NUEVA LISTA CREADA!!!
-        // alumnos = (Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6));
+        for (int i = 0; i < numAlumnos; i++) {
+            Alumno alumno = new Alumno("Gonzalo" + i, "Núñez" + i, 22, Math.random()*10, "Gonzañez@gmail.com");
+            alumnos.add(alumno);
+        }
 
         return alumnos;
+    } 
+
+    static List<Alumno> obtenerAlumnos() {
+        // Alumno alumno1 = new Alumno("N1", "A1", 18, 4.9, "asdas1@gmail.com");
+        // Alumno alumno2 = new Alumno("N2", "A2", 19, 5, "asdas2@gmail.com");
+        // Alumno alumno3 = new Alumno("N1", "A3", 20, 4, "asdas3@gmail.com");
+        // Alumno alumno4 = new Alumno("N2", "A4", 21, 10, "asdas4@gmail.com");
+        // Alumno alumno5 = new Alumno("N3", "A5", 22, 7, "asdas5@gmail.com");
+        // Alumno alumno6 = new Alumno("N1", "A6", 23, 3.5, "asdas6@gmail.com");
+
+        // List<Alumno> alumnos = new ArrayList<>();
+        // alumnos.add(alumno1);
+        // alumnos.add(alumno2);
+        // alumnos.add(alumno3);
+        // alumnos.add(alumno4);
+        // alumnos.add(alumno5);
+        // alumnos.add(alumno6);
+       
+        // // Otras manera de crear las listas.
+        // // alumnos.add(new Alumno("N1", "A1", 18, 4.9, "asdas1@gmail.com"));
+        // // alumnos.add(new Alumno("N2", "A2", 19, 5, "asdas2@gmail.com"));
+        // // alumnos.add(new Alumno("N3", "A3", 20, 4, "asdas3@gmail.com"));
+        // // alumnos.add(new Alumno("N4", "A4", 21, 10, "asdas4@gmail.com"));
+        // // alumnos.add(new Alumno("N5", "A5", 22, 7, "asdas5@gmail.com"));
+        // // alumnos.add(new Alumno("N6", "A6", 23, 3.5, "asdas6@gmail.com"));
+        
+        // // Otra manera de crear las listas.
+        // // List<Alumno> listaAlumnos = Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6);
+
+        // // Aquí se añaden los alumnos a la lista.
+        // // alumnos.addAll(Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6));
+        
+        // // Aquí se crea la lista y se añaden los alumnos. APUNTAMOS A UNA NUEVA LISTA CREADA!!!
+        // // alumnos = (Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6));
+
+        return obtenerAlumnos (6);
+
+        // List<Alumno> alumnos = obtenerAlumnos(6);
+        // return alumnos;
     }
 
     //======================================== MOSTRAR INFO ALUMNOS ========================================
@@ -103,7 +118,7 @@ public class MainAlumnos2 {
     }
 
     //======================================== DISTRIBUIR ALUMNOS EN AULAS ========================================
-    private Map<String, List<Alumno>> distribuirAlumnosEnAulas(List<Alumno> alumnos) {
+    public Map<String, List<Alumno>> distribuirAlumnosEnAulas(List<Alumno> alumnos) {
         Map<String, List<Alumno>> aulas = new LinkedHashMap<>();
         aulas.put("Aula 1", alumnos.subList(0, 2)); // DESDE 0 HASTA 2 (NO INCLUYE 2).
         aulas.put("Aula 2", alumnos.subList(2, 4)); // DESDE 2 HASTA 4 (NO INCLUYE 4).

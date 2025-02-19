@@ -19,6 +19,12 @@ public class Colegio {
     private String direccion;
     private Map<String, List<Alumno>> aulas;
 
+    public Colegio(String nombre, String direccion, Map<String, List<Alumno>> aulas) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.aulas = aulas;
+    }
+
     public Colegio(String nombre, String direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
