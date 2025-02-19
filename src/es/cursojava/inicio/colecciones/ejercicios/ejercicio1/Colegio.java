@@ -6,8 +6,11 @@ import java.util.Map;
 import java.util.Set;
 
 import es.cursojava.POO.centroeducativo.Alumno;
+import lombok.Getter;
+import lombok.Setter;
 
-//import 
+@Getter
+@Setter
 
 // Lista de Colegios, con Mapa de Aulas y Lista de Alumnos...
 // colegios.get(0).getAulas().get("aula1")get(0).getNombre()  ->  1er Alumno

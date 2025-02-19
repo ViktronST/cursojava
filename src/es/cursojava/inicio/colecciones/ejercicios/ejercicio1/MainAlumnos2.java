@@ -3,7 +3,6 @@ package es.cursojava.inicio.colecciones.ejercicios.ejercicio1;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashMap;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -32,6 +31,10 @@ public class MainAlumnos2 {
 
         // Eliminar alumnos suspensos.
         probar.eliminarAlumnosSuspensos(alumnos);
+
+        // Obtener los colegios
+        List<Colegio> colegios = obtenerColegios();
+
     }
 
     //======================================== CREACIÓN DE ALUMNOS ========================================
@@ -346,4 +349,31 @@ public class MainAlumnos2 {
         }
     }
 
+    //======================================== CREACIÓN DE COLEGIOS ========================================
+    static List<Colegio> obtenerColegios() {
+        Colegio colegio1 = new Colegio("Montesori", "Calle Pepito Grillo");
+        Colegio colegio2 = new Colegio("Miguel Delibes", "Calle Santo Domingo");
+        Colegio colegio3 = new Colegio("María Guerrero", "Calle Real 23");
+
+        List<Colegio> colegios = new ArrayList<>();
+        colegios.add(colegio1);
+        colegios.add(colegio2);
+        colegios.add(colegio3);
+
+        // Otras manera de crear las listas.
+        // alumnos.add(new Colegio("Montesori", "Calle Pepito Grillo"));
+        // alumnos.add(new Colegio("Miguel Delibes", "Calle Santo Domingo"));
+        // alumnos.add(new Colegio("María Guerrero", "Calle Real 23"));
+        
+        // Otra manera de crear las listas.
+        // List<Colegio> listaColegios = Arrays.asList(colegio1, colegio2, colegio3);
+
+        // Aquí se añaden los alumnos a la lista.
+        // colegios.addAll(Arrays.asList(colegio1, colegio2, colegio3));
+        
+        // Aquí se crea la lista y se añaden los alumnos. APUNTAMOS A UNA NUEVA LISTA CREADA!!!
+        // colegios = (Arrays.asList(colegio1, colegio2, colegio3));
+
+        return colegios;
+    }
 }
