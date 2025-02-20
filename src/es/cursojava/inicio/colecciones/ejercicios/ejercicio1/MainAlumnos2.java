@@ -32,14 +32,11 @@ public class MainAlumnos2 {
         // Eliminar alumnos suspensos.
         probar.eliminarAlumnosSuspensos(alumnos);
 
-        // Obtener los colegios
-        List<Colegio> colegios = obtenerColegios();
-
     }
 
     //======================================== CREACIÓN DE ALUMNOS ========================================   
     // Sobrecargamos el método de generar alumnos, para crear sólo los que necesitemos.
-    static List<Alumno> obtenerAlumnos(int numAlumnos) {
+    static List<Alumno> obtenerAlumnos1(int numAlumnos) {
         List<Alumno> alumnos = new ArrayList<>();
 
         for (int i = 0; i < numAlumnos; i++) {
@@ -83,7 +80,7 @@ public class MainAlumnos2 {
         // // Aquí se crea la lista y se añaden los alumnos. APUNTAMOS A UNA NUEVA LISTA CREADA!!!
         // // alumnos = (Arrays.asList(alumno1, alumno2, alumno3, alumno4, alumno5, alumno6));
 
-        return obtenerAlumnos (6);
+        return obtenerAlumnos1 (6);
 
         // List<Alumno> alumnos = obtenerAlumnos(6);
         // return alumnos;
@@ -392,11 +389,4 @@ public class MainAlumnos2 {
         return colegios;
     }
 
-    //======================================== MOSTRAR INFO COLEGIOS ========================================
-    private void mostrarInfoColegios(List<Colegio> colegios) {
-        System.out.println("================  Listado de Colegios ================");
-        for (Colegio colegio : colegios) {
-            System.out.println(colegio);
-        }
-    }
 }

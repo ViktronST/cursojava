@@ -48,4 +48,17 @@ public class Colegio {
         }
     }
 
+    public void guardarAlumno (String aula, Alumno alumno) {
+        this.aulas.get(aula).add(alumno);
+    }
+
+    public void guardarAlumno1 (String aula, List<Alumno> alumnos) {
+        this.aulas.get(aula).addAll(alumnos);
+        // List<Alumno> alumnosAntiguos = this.aulas.put(aula, alumnos);   // .put y .replace hacen lo mismo
+    }
+
+    public List<Alumno> getMapa() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getMapa'");
+    }
 }
