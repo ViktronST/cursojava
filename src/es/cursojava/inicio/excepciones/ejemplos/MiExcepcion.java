@@ -1,4 +1,4 @@
-package es.cursojava.inicio.excepciones;
+package es.cursojava.inicio.excepciones.ejemplos;
 
 public class MiExcepcion extends Exception{
     

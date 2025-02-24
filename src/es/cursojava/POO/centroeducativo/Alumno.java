@@ -1,5 +1,7 @@
 package es.cursojava.POO.centroeducativo;
 
+import es.cursojava.inicio.excepciones.ejercicios.ejercicio1.NotaInvalidaExcepcion;
+
 //POJO 
 public class Alumno {
     private String nombre;
@@ -15,15 +17,6 @@ public class Alumno {
     }
 
     //Constructor A
-    public Alumno(String nombre, String apellido, int edad, double notaMedia, String email) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.notaMedia = notaMedia;
-        this.email = email;
-    }
-
-    //Constructor B
     public Alumno(String nombre, String apellido, int edad, double notaMedia, String email, String[] asignaturas) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -33,8 +26,22 @@ public class Alumno {
         this.asignaturas = asignaturas;
     }
 
-    //Constructor C con excepción
-    
+    //Constructor B con excepción
+    public Alumno(String nombre, String apellido, int edad, double notaMedia, String email) throws NotaInvalidaExcepcion {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        if (edad < 0) {
+            throw new IllegalArgumentException("La edad no puede ser negativa.");
+        } else {
+            this.edad = edad;
+        }
+        if (notaMedia < 0 || notaMedia > 10) {
+            NotaInvalidaExcepcion n = new NotaInvalidaExcepcion("La nota media debe estar entre 0 y 10.");
+            throw n;
+        }
+        this.notaMedia = notaMedia;
+        this.email = email;
+    }
 
     //Método estudiar
     public void estudiar() {

@@ -1,4 +1,4 @@
-package es.cursojava.inicio.excepciones;
+package es.cursojava.inicio.excepciones.ejemplos;
 
 import es.cursojava.POO.centroeducativo.Alumno;
 
