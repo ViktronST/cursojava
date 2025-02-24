@@ -33,6 +33,9 @@ public class Alumno {
         this.asignaturas = asignaturas;
     }
 
+    //Constructor C con excepción
+    
+
     //Método estudiar
     public void estudiar() {
         if (this.notaMedia == 0) {
