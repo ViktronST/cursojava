@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.concesionario;
+package es.cursojava.poo.herencia.concesionario;
 
 public class Motocicleta extends Vehiculo{
     private boolean tieneSidecar;

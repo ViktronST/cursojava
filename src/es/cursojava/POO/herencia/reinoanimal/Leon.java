@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.reinoanimal;
+package es.cursojava.poo.herencia.reinoanimal;
 
 public class Leon extends Animal{
     //Atributos

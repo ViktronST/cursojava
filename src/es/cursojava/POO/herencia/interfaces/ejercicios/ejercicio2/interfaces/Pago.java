@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio2.interfaces;
+package es.cursojava.poo.herencia.interfaces.ejercicios.ejercicio2.interfaces;
 
 public interface Pago {
 

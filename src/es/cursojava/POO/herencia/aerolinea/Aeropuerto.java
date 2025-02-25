@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.aerolinea;
+package es.cursojava.poo.herencia.aerolinea;
 
 public class Aeropuerto {
     public static void main(String[] args) {

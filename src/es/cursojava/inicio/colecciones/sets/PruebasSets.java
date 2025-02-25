@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-import es.cursojava.POO.centroeducativo.Alumno;
+import es.cursojava.poo.centroeducativo.Alumno;
 
 import java.util.Iterator;
 

@@ -8,8 +8,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import es.cursojava.POO.centroeducativo.Alumno;
 import es.cursojava.inicio.funciones.Utilidades;
+import es.cursojava.poo.centroeducativo.Alumno;
 
 public class MainAlumnos2 {
     public static void main(String[] args) {

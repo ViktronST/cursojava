@@ -1,6 +1,6 @@
-package es.cursojava.POO.herencia.interfaces.ejercicios.ejemplos.clases;
+package es.cursojava.poo.herencia.interfaces.ejercicios.ejemplos.clases;
 
-import es.cursojava.POO.herencia.interfaces.ejercicios.ejemplos.interfaces.Interfaz3;
+import es.cursojava.poo.herencia.interfaces.ejercicios.ejemplos.interfaces.Interfaz3;
 
 public class ClaseInterfaz2 implements Interfaz3{
 

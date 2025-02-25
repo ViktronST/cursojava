@@ -1,6 +1,6 @@
-package es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio2.clases;
+package es.cursojava.poo.herencia.interfaces.ejercicios.ejercicio2.clases;
 
-import es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio2.interfaces.Pago;
+import es.cursojava.poo.herencia.interfaces.ejercicios.ejercicio2.interfaces.Pago;
 
 public class ProcesadorPagos {
 

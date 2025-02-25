@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import es.cursojava.POO.centroeducativo.Alumno;
+import es.cursojava.poo.centroeducativo.Alumno;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio3.clases;
+package es.cursojava.poo.herencia.interfaces.ejercicios.ejercicio3.clases;
 
 public class Camion extends Vehiculo{
     private double capacidadCarga;

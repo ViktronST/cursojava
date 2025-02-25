@@ -2,7 +2,7 @@ package es.cursojava.inicio.colecciones.listas;
 
 import java.util.ArrayList;
 
-import es.cursojava.POO.herencia.reinoanimal.Vaca;
+import es.cursojava.poo.herencia.reinoanimal.Vaca;
 
 public class PruebasListas {
     public static void main(String[] args) {

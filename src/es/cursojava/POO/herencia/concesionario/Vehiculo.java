@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.concesionario;
+package es.cursojava.poo.herencia.concesionario;
 
 import java.time.LocalDate;
 

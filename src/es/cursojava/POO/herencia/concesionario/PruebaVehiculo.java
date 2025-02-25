@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.concesionario;
+package es.cursojava.poo.herencia.concesionario;
 
 public class PruebaVehiculo {
     public static void main(String[] args) {

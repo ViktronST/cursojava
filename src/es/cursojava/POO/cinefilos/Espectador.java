@@ -1,4 +1,4 @@
-package es.cursojava.POO.cinefilos;
+package es.cursojava.poo.cinefilos;
 
 public class Espectador {
     private String nombre;

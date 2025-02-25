@@ -6,7 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import es.cursojava.POO.centroeducativo.Alumno;
+import es.cursojava.inicio.excepciones.ejercicios.ejercicio1.NotaInvalidaExcepcion;
+import es.cursojava.poo.centroeducativo.Alumno;
 
 public class MainAlumnos3 {
     public static void main(String[] args) {
@@ -22,15 +23,18 @@ public class MainAlumnos3 {
         Map<String, List<Alumno>> aulasCole3 = probar.distribuirAlumnosEnAulas(MainAlumnos2.obtenerAlumnos1(6));
         Colegio colegio3 = new Colegio("Cole3", "Dir3", aulasCole3);
 
-        colegio3.guardarAlumno("aula3", new Alumno("Jotaro", "Joestar", 17, 9.9, "null"));
+        try {
+            colegio3.guardarAlumno("aula3", new Alumno("Jotaro", "Joestar", 17, 9.9, "null"));
+        } catch (NotaInvalidaExcepcion error1) {
+            System.out.println("Error: " + error1.getMessage());
+        }
+
         //colegio3.guardarAlumno1("aula3", Arrays.asList(new Alumno("Alum4", "Apell4", 4), new Alumno("Alum5", "Apell5", 5)));
 
         List<Colegio> colegios = Arrays.asList(colegio1, colegio2, colegio3);
 
         MainAlumnos3 main = new MainAlumnos3();
         main.pintaDatosColegios(colegios);
-
-    }
 
     }
 

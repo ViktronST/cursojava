@@ -1,6 +1,6 @@
 package es.cursojava.inicio.excepciones.ejemplos;
 
-import es.cursojava.POO.centroeducativo.Alumno;
+import es.cursojava.poo.centroeducativo.Alumno;
 
 public class EjemploExcepciones {
     public static void main(String[] args) {

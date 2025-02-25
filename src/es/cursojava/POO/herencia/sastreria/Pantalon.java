@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.sastreria;
+package es.cursojava.poo.herencia.sastreria;
 
 public class Pantalon extends Ropa{
     private Boton boton;

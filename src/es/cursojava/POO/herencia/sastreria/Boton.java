@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.sastreria;
+package es.cursojava.poo.herencia.sastreria;
 
 public class Boton {
     //Creamos la clase botón con los atributos color, tamaño y forma.

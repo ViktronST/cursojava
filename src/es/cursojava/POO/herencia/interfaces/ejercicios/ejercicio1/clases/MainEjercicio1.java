@@ -1,8 +1,8 @@
-package es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.clases;
+package es.cursojava.poo.herencia.interfaces.ejercicios.ejercicio1.clases;
 
-import es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.interfaces.Apagable;
-import es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.interfaces.Encendible;
-import es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.interfaces.Operable;
+import es.cursojava.poo.herencia.interfaces.ejercicios.ejercicio1.interfaces.Apagable;
+import es.cursojava.poo.herencia.interfaces.ejercicios.ejercicio1.interfaces.Encendible;
+import es.cursojava.poo.herencia.interfaces.ejercicios.ejercicio1.interfaces.Operable;
 
 public class MainEjercicio1 {
     public static void main(String[] args) {

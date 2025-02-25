@@ -1,4 +1,4 @@
-package es.cursojava.POO.centroeducativo;
+package es.cursojava.poo.centroeducativo;
 
 import es.cursojava.inicio.excepciones.ejercicios.ejercicio1.NotaInvalidaExcepcion;
 

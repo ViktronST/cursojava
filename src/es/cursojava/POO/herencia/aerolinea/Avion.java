@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.aerolinea;
+package es.cursojava.poo.herencia.aerolinea;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

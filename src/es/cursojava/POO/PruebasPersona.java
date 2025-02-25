@@ -1,4 +1,4 @@
-package es.cursojava.POO;
+package es.cursojava.poo;
 
 public class PruebasPersona {
     public static void main(String[] args) {

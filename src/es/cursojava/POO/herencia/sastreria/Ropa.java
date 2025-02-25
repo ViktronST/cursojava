@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.sastreria;
+package es.cursojava.poo.herencia.sastreria;
 
 public class Ropa {
     private String color;

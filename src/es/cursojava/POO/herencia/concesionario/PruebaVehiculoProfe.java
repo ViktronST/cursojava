@@ -1,4 +1,4 @@
-package es.cursojava.POO.herencia.concesionario;
+package es.cursojava.poo.herencia.concesionario;
 
 import es.cursojava.poo.herencia.ejercicios.vehiculos.MainVehiculos;    //Librería 
 import lombok.AllArgsConstructor;

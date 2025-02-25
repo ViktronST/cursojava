@@ -8,8 +8,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import es.cursojava.POO.centroeducativo.Alumno;
+import es.cursojava.inicio.excepciones.ejercicios.ejercicio1.NotaInvalidaExcepcion;
 import es.cursojava.inicio.funciones.Utilidades;
+import es.cursojava.poo.centroeducativo.Alumno;
 
 public class MainAlumnos {
     public static void main(String[] args) {
@@ -19,7 +20,7 @@ public class MainAlumnos {
         probar.mostrarAlumnoPorAula(probar.crearAlumnos());
     }
 
-    private List<Alumno> crearAlumnos() {
+    private List<Alumno> crearAlumnos() throws NotaInvalidaExcepcion {
         Alumno alumno1 = new Alumno("N1", "A1", 18, 4.9, "asdas1@gmail.com");
         Alumno alumno2 = new Alumno("N2", "A2", 19, 5, "asdas2@gmail.com");
         Alumno alumno3 = new Alumno("N1", "A3", 20, 4, "asdas3@gmail.com");

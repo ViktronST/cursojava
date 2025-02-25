@@ -1,4 +1,4 @@
-package es.cursojava.POO.cinefilos;
+package es.cursojava.poo.cinefilos;
 
 import es.cursojava.inicio.funciones.Utilidades;
 

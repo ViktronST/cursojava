@@ -1,6 +1,6 @@
-package es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.clases;
+package es.cursojava.poo.herencia.interfaces.ejercicios.ejercicio1.clases;
 
-import es.cursojava.POO.herencia.interfaces.ejercicios.ejercicio1.interfaces.NoUpdatable;
+import es.cursojava.poo.herencia.interfaces.ejercicios.ejercicio1.interfaces.NoUpdatable;
 import lombok.Getter;
 import lombok.Setter;
 
