@@ -25,7 +25,7 @@ public class MainExcepcion {
         
         List <Alumno> listaAlumnos = new ArrayList<>();
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 3; i++) {
             System.out.println("Datos del alumno " + (i+1));
             try {
                 String nombre = Utilidades2.pideDatoCadena("Introduce el NOMBRE del alumno " + (i+1) + ": ");
@@ -46,6 +46,9 @@ public class MainExcepcion {
         }
 
         System.out.println("Número de alumnos gurdados: " + listaAlumnos.size());
+        for (Alumno alumno : listaAlumnos) {
+            System.out.println(alumno);
+        }
 
     }
 }
