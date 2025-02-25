@@ -10,7 +10,7 @@ public class TazaCafe {
         this.temperatura = temperatura;
     }
 
-    //  Solo los comensales y los clientes Asiduos pueden tomar café.
+    // Solo los comensales y los clientes Asiduos pueden tomar café.
     public void servirCafe() {
         System.out.println("Café servido");
     }
