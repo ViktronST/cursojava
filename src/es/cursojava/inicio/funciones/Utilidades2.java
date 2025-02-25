@@ -19,6 +19,15 @@ public class Utilidades2 {
 		
 		return cadena;
 	}
+    
+    public static double pideDatoDecimal(String texto) {
+		System.out.print(texto);
+		Scanner scan = new Scanner(System.in);
+		double numero = scan.nextInt();
+		
+		return numero;
+	}
+
 	
     /**
      * Funcion que sirve para pintar las opciones de un menu que llegan en un array de Strings.

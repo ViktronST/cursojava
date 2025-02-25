@@ -26,8 +26,17 @@ public class Alumno {
         this.asignaturas = asignaturas;
     }
 
-    //Constructor B con excepción
-    public Alumno(String nombre, String apellido, int edad, double notaMedia, String email) throws NotaInvalidaExcepcion {
+    //Constructor B 
+    public Alumno(String nombre, String apellido, int edad, double notaMedia, String email) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.notaMedia = notaMedia;
+        this.email = email;
+    }
+
+    //Constructor C con excepción
+    public Alumno(String nombre, String apellido, int edad, double notaMedia) throws NotaInvalidaExcepcion {
         this.nombre = nombre;
         this.apellido = apellido;
         if (edad < 0) {
@@ -36,11 +45,12 @@ public class Alumno {
             this.edad = edad;
         }
         if (notaMedia < 0 || notaMedia > 10) {
-            NotaInvalidaExcepcion n = new NotaInvalidaExcepcion("La nota media debe estar entre 0 y 10.");
-            throw n;
+            // NotaInvalidaExcepcion n = new NotaInvalidaExcepcion("La nota media debe estar entre 0 y 10.");
+            // throw n;
+            throw new NotaInvalidaExcepcion("La nota media debe estar entre 0 y 10.");
+        } else {
+            this.notaMedia = notaMedia;
         }
-        this.notaMedia = notaMedia;
-        this.email = email;
     }
 
     //Método estudiar
