@@ -5,7 +5,7 @@ import es.cursojava.poo.centroeducativo.Alumno;
 public class MainExcepcion {
     public static void main(String[] args) {
         MainExcepcion main = new MainExcepcion();
-        main.creaAlumno("Viktor", "Stoyanov", -24, 10, "null@null.es");;
+        main.creaAlumno("Viktor", "Stoyanov", 24, 10, "null@null.es");;
     }
 
     private void creaAlumno(String nombre, String apellido, int edad, double notaMedia, String email) {

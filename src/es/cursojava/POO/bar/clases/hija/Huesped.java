@@ -1,5 +1,30 @@
 package es.cursojava.poo.bar.clases.hija;
 
-public class Huesped {
+import es.cursojava.poo.bar.clases.padre.Cliente;
 
+public class Huesped extends Cliente{
+    private String dni;
+
+    // Constructor
+    public Huesped(String nombre, String dni) {
+        super(nombre);
+        this.dni = dni;
+    }
+
+    // toString
+    @Override
+    public String toString() {
+        return "Huesped [DNI= " + dni + "]";
+    }
+
+    // Getters y Setters
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    
 }
