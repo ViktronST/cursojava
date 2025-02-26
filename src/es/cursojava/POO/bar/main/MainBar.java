@@ -72,19 +72,19 @@ public class MainBar {
 
         for (Cliente cliente : clientes) {
             if (cliente instanceof Comensal || cliente instanceof ClienteAsiduo) {
-                System.out.println("El cliente " + cliente + " recibe una taza de café.");
+                System.out.println("El cliente " + cliente.getNombre() + " recibe una taza de café.");
 
                 // Crear una nueva taza de café con un tipo aleatorio y temperatura inicial
                 TazaCafe taza = new TazaCafe("Expreso", 60);
 
                 try {
                     taza.tomarCafe(); // El cliente intenta tomar café
-                    System.out.println("El cliente " + cliente + " ha tomado su café sin problemas.");
+                    System.out.println("El cliente " + cliente.getNombre() + " ha tomado su café sin problemas.");
                 } catch (TooHotTemperatureException | TooColdTemperatureException e) {
-                    System.out.println("El cliente " + cliente + " no pudo tomar su café: " + e.getMessage());
+                    System.out.println("El cliente " + cliente.getNombre() + " no pudo tomar su café: " + e.getMessage());
                 }
             } else {
-                System.out.println("El cliente " + cliente + " no puede tomar café.");
+                System.out.println("El cliente " + cliente.getNombre() + " no puede tomar café.");
             }
         }
         
