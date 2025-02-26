@@ -21,17 +21,17 @@ public class TazaCafe {
 
     // Método tomarCafe
     public void tomarCafe() throws TooHotTemperatureException, TooColdTemperatureException {
-        System.out.println("Tomando café...");
+        System.out.println("\tTomando café...");
 
         temperatura = Math.random() * 100;
-        System.out.println("Temperatura del café: " + temperatura);
+        System.out.println("\tTemperatura del café: " + temperatura);
 
         if (temperatura > 80) {
             throw new TooHotTemperatureException("¡Cuidado! El café está muy caliente.");
         } else if (temperatura < 40) {
             throw new TooColdTemperatureException("¡Cuidado! El café está muy frío.");
         } else {
-            System.out.println("¡Qué rico café!");
+            System.out.println("\t¡Qué rico café!");
         }
         
     }

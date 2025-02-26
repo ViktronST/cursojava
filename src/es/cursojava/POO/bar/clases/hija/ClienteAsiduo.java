@@ -14,7 +14,7 @@ public class ClienteAsiduo extends Cliente{
     // toString
     @Override
     public String toString() {
-        return super.toString() + "ClienteAsiduo [Mote= " + mote + "]";
+        return super.toString() + "ClienteAsiduo [ Mote: " + mote + " ] ";
     }
 
     // Getters y Setters
