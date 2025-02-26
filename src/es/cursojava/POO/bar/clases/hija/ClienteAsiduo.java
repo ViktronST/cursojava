@@ -11,15 +11,10 @@ public class ClienteAsiduo extends Cliente{
         this.mote = mote;
     }
 
-    // Método tomarCafe
-    public void tomarCafe() {
-        System.out.println("Tomando café...");
-    }
-
     // toString
     @Override
     public String toString() {
-        return "ClienteAsiduo [Mote= " + mote + "]";
+        return super.toString() + "ClienteAsiduo [Mote= " + mote + "]";
     }
 
     // Getters y Setters

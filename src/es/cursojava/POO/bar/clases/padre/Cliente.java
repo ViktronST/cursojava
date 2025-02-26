@@ -11,9 +11,9 @@ public class Cliente {
     // toString
     @Override
     public String toString() {
-        return "Cliente [Nombre= " + nombre + "]";
+        return "Cliente [Nombre= " + nombre + "] -> ";
     }
-    
+
     // Getters y Setters
     public String getNombre() {
         return nombre;

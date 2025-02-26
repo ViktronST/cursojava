@@ -14,7 +14,7 @@ public class Huesped extends Cliente{
     // toString
     @Override
     public String toString() {
-        return "Huesped [DNI= " + dni + "]";
+        return super.toString() + "Huesped [DNI= " + dni + "]";
     }
 
     // Getters y Setters

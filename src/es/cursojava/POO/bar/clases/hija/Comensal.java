@@ -14,7 +14,7 @@ public class Comensal extends Cliente{
     // toString
     @Override
     public String toString() {
-        return "Comensal [Tiene Reserva= " + tieneReserva + "]";
+        return super.toString() + "Comensal [Tiene Reserva= " + tieneReserva + "]";
     }
 
     // Getters y Setters
